@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio posicionamiento</title>
+    <style>
+        main{
+            width: 50%;
+            background: #ccc;
+            margin: 0 auto;
+        }
+        .padre{width: 100%; height: 500px;background: #000;margin: auto; position: relative}
+        #rojo{width: 100px; height: 100px; background:#ff0000; border-radius: 50%;
+            position: absolute; top: 25px; left: 25px; z-index: 400;}
+        #rojo2{width: 100px; height: 100px; background:olive; border-radius: 50%;
+            position: absolute; top: 25px; left: 100px; z-index: 600;}
+        #rojo3{width: 100px; height: 100px; background:turquoise; border-radius: 50%;
+            position: absolute; top: 50px; left: 50px; z-index: 900;}
+
+        #verde{width: 100px; height: 100px;background: #00ff00; border-radius: 50%;
+        position: absolute; top: 25px; right: 25px;
+        }
+        #azul{width: 100px; height: 100px; background:#0000ff; border-radius: 50%;
+        position: absolute; left: 300px;bottom: 25px;
+        
+        }
+    
+    </style>
+</head>
+<body>
+    <main>
+    <div class="padre">
+        <div id="rojo">1</div>
+        <div id="rojo2">2</div>
+        <div id="rojo3">3</div>
+
+        <div id="verde"></div>
+        <div id="azul"></div>
+
+    </div>
+    </main>
+</body>
+</html>

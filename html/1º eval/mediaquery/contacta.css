@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: "boder-box";
+}
+
+main{
+    width: 70%;
+    margin: auto;
+    background: #ccc;
+    margin-top: 25px;
+}
+header{ width: 100%; margin:auto}
+
+header .contenedor{
+    display: flex;
+    justify-content: flex-end;
+}
+header .contenedor img{width: 20%}
+form{
+    width: 50%; 
+    margin: auto;
+    height: 300px;
+}
+input, select{
+    display: block;
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+input[type="submit"]{
+    width: 30%; background: #4545; color: white; margin-left: 50px;
+}
+input[type="submit"]:hover{
+    background: crimson; border-radius: 30px; color: #000;
+}

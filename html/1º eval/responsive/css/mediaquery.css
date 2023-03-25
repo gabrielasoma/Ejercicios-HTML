@@ -1,0 +1,105 @@
+@media (min-width: 1024px){/*vamos a dar forma al tamaño de escritorio*/
+    .contenedor{
+        width:1000px;
+    }  
+      
+    #banner img{
+        margin-top: -600px;/*para q vaya desapareciendo de pantalla, va subiendo*/
+    }
+    #banner h2{
+        font-size: 36px;
+    }
+    #banner p{
+        font-size: 28px;
+    }
+    #banner .contenedor{
+    position: absolute;
+    top: 15%;
+    left: 25%;/*posición absoluta, y top y left para colocarlo en el banner*/
+    
+    }
+    #banner a{
+        width: 25%;
+        position: absolute;
+        top: 70px;
+        left: 600px;
+        text-align: center;
+    }
+    .menu{
+        position: static;/*para que coja el flujo de html*/
+        width: auto;
+        height: 50px;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+        justify-content: flex-end;
+    }
+     
+    header label{
+        display: none; 
+    }
+    .menu a:hover {
+        height: auto;
+    }
+    .menu a{
+        border: none;
+    }
+    #bienvenida{
+        font-size: 11pt;
+        
+    }
+  
+       
+    #bienvenida img{
+        width: 25%;
+        border-radius: 15%;
+        box-shadow: 6px 6px 6px rgba(138, 179, 198, 0.98);
+    }
+    #rosaleda img{
+        border-radius:15%;
+        max-width: 200px;
+        box-shadow: 6px 6px 6px rgba(138, 179, 198, 0.98);
+        margin-top: 25px;
+    }
+    #rosaleda .contenedor{
+        height: 200px;
+       justify-content: space-around;/*para que distribuya por toda la línea*/
+    }
+    #rosaleda h4{
+        margin-top: 15px;
+    }
+    
+    #patrimonio img{
+        border-radius:25%;
+        max-width: 200px;
+        box-shadow: 6px 6px 6px rgba(138, 179, 198, 0.98);
+        margin-top: 25px;
+    }
+    
+    #patrimonio .contenedor{
+         height: 200px;
+    justify-content: space-around;/*para que distribuya por toda la línea*/
+    }
+   #patrimonio h4{
+        margin-top: 15px;
+    }
+    #estatuas img{
+        max-width: 200px;
+        box-shadow: 6px 6px 6px rgba(138, 179, 198, 0.98);
+        margin-top: 25px;
+    }
+  
+    #estatuas .contenedor{
+         height: 200px;
+        justify-content: space-around;/*para que distribuya por toda la línea*/
+    }
+    #estatuas h4{
+        margin-top: 15px;
+    }
+    footer a{
+        font-size: 40px;  
+        
+    }
+footer{padding-top: 40px}
+    
+}

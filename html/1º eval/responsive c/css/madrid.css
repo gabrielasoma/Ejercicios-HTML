@@ -1,0 +1,282 @@
+/*en primer lugar tienen q aparecer los imports*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet");/*es el link q hemos copiado de google fonts*/
+*{margin: 0; padding: 0;box-sizing: border-box;}
+body{
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;/*copiado de google fonts*/
+}
+header{/*fixed para que no se mueva al navegar por la pagina, y top y left 0 para que no quede ningún margen.z-index 100 para que quede siempre delante de todo*/
+    width: 100%; height: 50px;background: #333; color: #fff; position: fixed;top: 0;left: 0;z-index: 100;
+}
+.contenedor{
+    margin: auto;/*para que se centre, ahora solo usamos maring: 0 auto para el main, en aca contenedor se usa auto sólo*/
+}
+
+h1{
+    float: left;
+    margin-top: 15px;
+    font-family: cursive;
+    font-size: 22px;
+    
+}
+header label{
+    float: right;
+    font-size: 28px;
+    margin: 6px 6px;
+    cursor: pointer;
+}
+header .contenedor{/*mencionamos el header antes de contenedor pq posteriormente vamos a crear un contenedor para cada sección*/
+    display: table;/*posiciona como tabla pero no crea bordes*/
+}
+header .contenedor{
+    width: 100%;
+}
+#menu-bar{
+    display: none;/*para ocultar la caja de check*/
+}
+.menu{
+    position: absolute;
+    top: 50px;/*para que al pinchar en menu, este comience a partir de 50px*/
+    left: 0;
+    width: 100%;
+    height: 55vh;/*para que ocupe toda la vertical de su caja*/
+    background: rgba(165, 179, 211, 0.9);
+    transition: all 0.5s;/*para que el menú aparezca y desaparezca de modo gradual, no bruscamente*/
+    transform: translateX(-100%);/*para q se traslade por el eje x, de un lado a otro, 100%*/
+        
+}
+.menu a{/*damos forma a la barra de navegación*/
+    display: block;
+    color: aliceblue;
+    font-family: cursive;
+    font-weight: bold;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+#menu-bar:checked ~ .menu{/*cheked es una pseudoclase, el simbolo se consigue con alt+126, cuando verifique la casilla de check, el menu-bar, el menu se traslade hasta el 0% en el eje X*/
+    transform: translateX(0%);
+}
+.menu a:hover {
+    background: rgba(51,51,51,0.5);
+}
+section{
+    width: 100%;
+    margin-bottom: 25px;
+}
+#banner{
+    margin-top: 50px;/*le damos 50px para q no se meta en la barra, q mide 50px*/
+    position: relative;/*posición relativa para poder modificarla en móvil, tablet y escritorio*/
+}
+#banner img{
+    width: 100%;
+    height: 100%;
+}
+#banner .contenedor{
+    position: absolute;
+    left: 20%;
+    top: 20%;/*posición absoluta, y top y left para colocarlo en el banner*/
+    /*poer esto para que los elementos estén el columna*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    
+}
+#banner h2{
+    font-size: 20px;
+    color: aliceblue;
+    text-shadow: rgba(28, 113, 167, 0.88) 4px 4px 4px;
+    
+}
+#banner p{
+    color: aliceblue;
+    text-shadow: rgba(28, 113, 167, 0.88) 4px 4px 4px;
+        
+}
+#banner a{
+    width: 80%;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px;
+    border: 4px solid rgba(165, 179, 211, 0.9);
+    background: rgba(165, 179, 211, 0.9);
+    color: aliceblue;
+    font-family: cursive;
+    border-radius: 10px; 
+    margin-left: 30px;
+    
+   
+}
+#banner a:hover{
+    background: rgba(51,51,51,0.5);
+    color: aliceblue;
+   
+}
+
+#bienvenida{
+    font-size: 11pt;
+    color: #000;
+    text-align: justify;
+    padding: 0 10px;
+/*para centrar los contenidos de la caja, lo que viene a continución*/ 
+   /* display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;*/
+    
+}
+
+p{
+   /* padding-left: 10px;*/
+}
+
+#bienvenida img{
+    width: 70%;
+    margin-left: 50px;
+}
+/*formulario registrate*/
+#registrarse{
+    margin-top: 25px;
+}
+.form-registro{
+    
+    width: 95%;
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    border-radius: 7px;
+    
+}
+
+.form-titulo{
+    background: deepskyblue;
+    color:white;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom: 5px solid crimson;
+}
+
+.contenedor-inputs{
+    padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+input{
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid darkgray;
+}
+
+
+.input-48{width: 48%;}
+
+
+.input-100{width: 100%;}
+
+.btn-enviar{
+    background: crimson;
+    color: white;
+    margin: auto;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-size: 20px;
+    
+    
+}
+
+
+.btn-enviar:active{
+    transform: scale(1.2);
+}
+
+
+.form-link{
+    width: 100%; 
+    margin: 7px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#rosaleda h3,h4{
+    text-align: center;
+    
+}
+#rosaleda .contenedor{
+    display: flex;
+    justify-content: center;
+         
+}
+#rosaleda img{
+    width: 95%;
+    max-width: 200px;/*para que, como máximo, sea de ese tamaño, porque el 100% en pantalla móvil sería de 487px*/    
+}
+article {
+    padding-left: 1%;
+}
+#patrimonio h3,h4{
+    text-align: center;
+    
+}
+#patrimonio .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;/*cuando no encuentra espacio, hace filas*/        
+}
+#patrimonio img{
+    width: 100%;
+    max-width: 200px;/*para que, como máximo, sea de ese tamaño, porque el 100% en pantalla móvil sería de 487px*/ 
+    
+}
+#estatuas{
+    background: #95938d;
+    color: gold;
+    padding: 20px;
+  
+}
+#estatuas h3{
+    text-align: center;
+    color:#fff;
+    
+}
+#estatuas article > h4{/*para q actúe sobre los h4 de estatuas, hay que mencionar a article*/
+    color: rgba(7, 93, 131, 0.97);
+    
+}
+#estatuas .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;/*cuando no encuentra espacio, hace filas*/        
+}
+#estatuas img{
+    width: 100%;
+    max-width: 200px;/*para que, como máximo, sea de ese tamaño, porque el 100% en pantalla móvil sería de 487px*/  
+    
+}
+footer{
+    width: 100%; height: 100px;padding-top: 20px;background: #333
+}
+footer p{
+    color: #fff;padding-top: 20px;font-size: 14px;
+}
+footer .contenedor{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+footer a{
+    color: greenyellow; text-decoration: none;
+}

@@ -1,0 +1,125 @@
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+    
+}
+ 
+header{width: 100%; height: 120px; background: cornflowerblue;}
+ 
+ 
+ 
+ 
+header .container{
+    display:flex; 
+    justify-content: space-around; 
+    align-items: center;}
+header img{
+    /*las imagenes hay que modificarlas: sepuede hacer en px o %*/
+    width: 90px;
+    height: 90px;
+    border-radius: 50%
+    
+    /*Para colocar las imagenes aalrededor de los textos, se utiliza la siguiente propiedad
+            float: left - colocarla a la izq del texto
+            float: right - colocarla a la derecha del texto
+    
+    
+    */
+    
+}
+#logo{
+    width:80px;
+    height: 80px;
+    background:darkblue;
+    border-radius: 50%;
+    font-family: broadway;
+    font-size: 0.7em;
+    text-align: center;
+    color:white;
+    letter-spacing: 1em;
+    padding: 25px 0 0 10px;
+    border: inset 3px white
+    /*bordes
+    none, dotted, dashed, solid, double, groove, inset, outset
+    
+    
+    */
+    
+    
+}
+ 
+ header h1{
+    text-transform: uppercase;  
+    font-size: 40px;
+    color: orange;
+ 
+    }
+#principal img {
+    float: left;
+    padding-right: 35px;
+    height: 500px
+    
+}
+h2{
+    font-family: monospace;
+    font-size: 20px;
+    color: red;
+}
+p{text-align: justify}
+ 
+#principal{
+    line-height: 1.5em; 
+}
+.capital{
+        float: left;
+        color: blue;
+        background: white;
+        font-size: 80px;
+        line-height: 3em;
+        font-family: time;
+        margin: 0 5px 0 0;     
+}
+nav{width: 100%; height: 40px; background: gray; margin: auto;}
+nav ul{display: flex; justify-content: space-around; padding: 10px 0 0 0}
+nav ul li{list-style: none; color: orange; text-transform: uppercase;font-weight: bold}
+nav ul li a{background:teal; padding: 3px 10px; list-style: none;color: orange}
+ 
+a:hover{
+    border-radius: 15px; text-transform: lowercase; color: white
+}
+aside{width: 100%;  }
+/* propiedad a la estructura de la tabla*/
+table{width: 80%; margin: 0 auto; border: 4px double black; margin-top: 25px; 
+ 
+border-collapse: collapse
+ 
+}
+ 
+thead th{border: 2px double teal; background:black; color:#fff}
+ 
+tr,td{border: 2px solid #000; background: #ccc; 
+font-family: monospace;font-size: 1em; font-weight: bold; text-align: center
+ 
+}
+tfoot{
+    height: 100px; background: #000
+}
+footer{
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    background: #ccc
+}
+footer .contenedor{ 
+    display: flex;
+    justify-content: space-around
+ 
+}
+footer a{
+    font-size: 50px;
+    color:orange;
+ 
+ 
+}

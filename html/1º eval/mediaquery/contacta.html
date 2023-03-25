@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacta con nosotros</title>
+    <link rel="stylesheet" href="contacta.css">
+</head>
+<body>
+    <main>
+    <header>
+        <div class= "contenedor">
+        <h2>Registrate en nuestro portal</h2>
+        <img src="img/logo.png">
+        </div>
+    </header>
+    <section>
+        <!--
+            En action se define el archivo que va a procesar el formulario
+            method: el metodo de enviar y recibir los datos del formulario.
+            Los metodos pueden ser: 
+            GET - recibe los datos en la dirección URL de la página
+            POST - recibe los datos en un documento externo que se encuentra en un servidor, 
+            los datos viajan ocultos
+
+        -->
+        <form action="" method="">
+            <!--Los campos más utilizados en un formulario son los inputs,estos pueden ser
+            de diferentes tipos-->
+            <input type="text" id="nombre" name="nombre" placeholder="Indica tu Nombre" maxlength="30">
+            <input type="text" id="apellido" name="apellido" placeholder="Indica tu apellido" maxlength="30">
+            <input type="email" id="correo" name="nombre" placeholder="Indica tu correo" maxlength="50">
+            <input type="date" name="nacimiento" placeholder="Fecha de nacimiento">
+            <!--Lista desplegable-->
+            <select main="estudios">
+                <option valor="bachillerato">bachillerato</option>
+                <option valor="grado_medio">grado medio</option>
+                <option valor="grado_superior">grado superior</option>
+                <option valor="licenciatura">licenciatura</option>
+
+            </select>
+            <input type="submit" name="enviar" value="ENVIAR">
+        </form>
+    </section>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
