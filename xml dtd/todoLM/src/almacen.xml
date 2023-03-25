@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<!DOCTYPE bdProductos SYSTEM "almacen.dtd">
+-->
+
+<bdProductos cod="1" xsi:noNamespaceSchemaLocation="almacen.xsd"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <producto>
+        <nombre>Teclado</nombre>
+        <codigo>C001</codigo>
+        <categoria>A</categoria>
+        <iva>21</iva>
+        <precio>15.00</precio>
+        <descuento>7</descuento>
+    </producto>
+    
+    <producto>
+        <nombre>Monitor</nombre>
+        <codigo>C002</codigo>
+        <categoria>B</categoria>
+        <iva>21</iva>
+        <precio>150.00</precio>
+        <descuento>10</descuento>     
+    </producto>
+    
+</bdProductos>

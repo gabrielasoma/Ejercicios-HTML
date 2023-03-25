@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<!DOCTYPE familia SYSTEM "familia.dtd">
+-->
+<familia codigo="P01-07" xsi:noNamespaceSchemaLocation="familia.xsd" 
+                        xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+    <padre>
+        <nombre>Antonio</nombre>
+        <apellido>Perez</apellido>
+        <apellido>Rodrigez</apellido>
+        <dni>12.345.678-A</dni>
+    </padre>
+
+    <madre>
+        <nombre>Elena</nombre>
+        <apellido>Roldán</apellido>
+        <apellido>Benitez</apellido>
+        <dni>90.123.456-B</dni>  
+    </madre>
+    
+    <hijos>
+        <hijo pos="2">
+            <nombre>Alejandro</nombre>
+            <apellido>Perez</apellido>
+            <apellido>Roldan</apellido>
+            <edad>12</edad>
+        </hijo>
+        
+        <hijo pos="3">
+            <nombre>Alejandro</nombre>
+            <apellido>Perez</apellido>
+            <apellido>Roldan</apellido>
+            <edad>12</edad>
+        </hijo>
+      
+        <hija pos="1">
+            <nombre>Elena</nombre>
+            <apellido>Perez</apellido>
+            <apellido>Roldan</apellido>
+            <dni>78.901.234-C</dni>  
+            
+        </hija>
+        
+    </hijos>
+    
+</familia>
+

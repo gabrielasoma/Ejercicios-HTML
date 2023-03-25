@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE deportistas[
+    <!ELEMENT deportistas (f1 | futbol | tenis)+>
+    
+    <!ELEMENT f1 (#PCDATA)>
+        <!ATTLIST f1 pais (ESP | FRA | ITA | ALE) "ESP">
+  
+    <!ELEMENT futbol (#PCDATA)>
+        <!ATTLIST futbol pais (ESP | ALE | ITA | FRA) "ESP">
+  
+    <!ELEMENT tenis (#PCDATA)>
+
+]>
+
+
+<deportistas>
+    <f1 pais="ALE">Sebastian Vettel</f1>
+    <f1>Alejandro</f1>
+    <f1 pais="ESP">Carlos Sainz</f1>
+    <futbol pais="ESP">Raul gonzales</futbol>
+    <tenis>Rafael Nadal</tenis>
+</deportistas>

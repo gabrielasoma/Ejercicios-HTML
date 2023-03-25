@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "libro.dtd">
+
+<biblioteca>
+    <libro numero="1">
+        <titulo>Fisica</titulo>
+        <autor>Hola</autor>
+        <editorial>river</editorial>
+        <isbn>7686645645</isbn>
+        <precio>12,00</precio>
+    </libro>
+        
+
+    <libro numero="10">
+        <titulo>Mates</titulo>
+        <autor>Hola</autor>
+        <editorial>river</editorial>
+        <isbn>7686645645</isbn>
+        <precio>12,00</precio>
+    </libro>
+</biblioteca>

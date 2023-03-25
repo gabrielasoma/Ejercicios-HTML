@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE deportistas[
+    <!ELEMENT deportistas (f1 | futbol | tenis)+>
+    
+    <!ELEMENT f1 (#PCDATA)>
+         <!ATTLIST f1 pais (ESP | FRA | ITA | ALE) "ESP">
+    
+    <!ELEMENT futbol (#PCDATA)>
+        <!ATTLIST futbol pais (ESP | FRA | ITA | ALE) "ESP">
+
+    <!ELEMENT tenis (#PCDATA)>
+]>
+
+
+<deportistas>
+    <f1 pais="ALE">sebas</f1>
+    <f1>alonso</f1>
+    <f1 pais="ESP">carlos</f1>
+    <futbol pais="ESP">maria</futbol>
+    <tenis>rafael</tenis>
+</deportistas>

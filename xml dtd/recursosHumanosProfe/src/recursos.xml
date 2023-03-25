@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE recursos SYSTEM "recursos.dtd">
+
+<recursos>
+    
+    <!--creo un primer empleado que tiene un único apellido, 
+    y como es el primero tendrá un número de 1-->
+    <empleado numero="1">
+        <nombre>Antonio</nombre>
+        <apellido>Riesgo</apellido>
+        <edad>23</edad>
+        <departamento>Finanzas</departamento>
+        <salario>2500,00</salario>    
+    </empleado>
+    
+    
+    <!--creo un segundo empleado, esta vez con dos apellidos y un número de 10, 
+    para que se entienda que puede haber todos los empleados deseados-->
+    <empleado numero="10">
+        <nombre>Marta</nombre>
+        <apellido>Naranjo Medina</apellido>
+        <edad>40</edad>
+        <departamento>Contabilidad</departamento>
+        <salario>5000,00</salario>
+    </empleado>
+    
+</recursos>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Intento nuevo Gaby-->
+
+<!--DTD-->
+<!DOCTYPE cine [
+<!ELEMENT cine (peliculas,directores) > 
+
+<!--Peliculas-->
+<!ELEMENT peliculas (pelicula)+> 
+<!ELEMENT pelicula (#PCDATA)>
+    <!ATTLIST pelicula cod ID #REQUIRED>
+
+<!--Director-->
+<!ELEMENT directores (director)+> 
+<!ELEMENT director (#PCDATA)>
+    <!ATTLIST director dir IDREFS #REQUIRED>
+]>
+
+
+<cine>
+    <peliculas> 
+         <pelicula cod="p1">Avatar</pelicula>
+         <pelicula cod="p2">Crepusculo</pelicula>
+         <pelicula cod="p3">Canta</pelicula>
+         <pelicula cod="p4">Frozen</pelicula>
+    </peliculas>
+    
+    <directores>
+        <director dir="p1">Maria Pumares </director>
+        <director dir="p1 p2 p3">Eva Villas </director>    
+    </directores>
+
+</cine>

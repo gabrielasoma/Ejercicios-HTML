@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT cine (peliculas, directores)>
+
+<!ELEMENT peliculas (pelicula)+>
+<!ELEMENT pelicula (#PCDATA)>
+    <!ATTLIST pelicula cp ID #REQUIRED>
+
+<!ELEMENT directores (director)+>
+<!ELEMENT director (#PCDATA)>
+    <!ATTLIST director d IDREFS #REQUIRED>

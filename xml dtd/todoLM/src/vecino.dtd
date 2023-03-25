@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!ELEMENT comunidad (vecino)+>
+
+<!ELEMENT vecino (nombre,apellido+,portal,pisoLetra,CCC?,cargo)>
+     <!ATTLIST vecino ref CDATA #REQUIRED> 
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT portal (#PCDATA)>
+<!ELEMENT pisoLetra (#PCDATA)>
+<!ELEMENT CCC (#PCDATA)> 
+<!ELEMENT cargo (#PCDATA)>

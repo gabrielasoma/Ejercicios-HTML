@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE deportistas [
+<!ELEMENT deportistas (f1 | futbol | tenis)+>
+
+<!--f1-->
+<!ELEMENT f1 (#PCDATA)
+    <!ATTLIST f1 pais (ESP | FRA | ITA | ALE) "ESP">
+<!--futbol-->
+<!ELEMENT futbol (#PCDATA) 
+    <!ATTLIST futbol pais (ESP | FRA | ITA | ALE) "ESP">
+<!--tenis-->
+<!ELEMENT tenis (#PCDATA)>
+]>
+
+
+<deportistas>
+    <f1 pais="ALE">Maria Pumares</f1>
+    <f1>Fernando Alonso</f1>
+    <f1 pais="ESP">Carlos Sainz</f1>
+    <futbol pais="ESP">Cristiano Ronaldo</futbol>
+    <tenis>Rafael Nadal</tenis>
+</deportistas>
+
+
+

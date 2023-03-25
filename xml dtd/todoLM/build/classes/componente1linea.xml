@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE componentes [
+    <!ELEMENT componentes (resistencia | condensador)+>
+    
+    <!ELEMENT resistencia (nombre,tipo,precio,medida)>
+    <!ELEMENT condensador (nombre,tipo,precio,medida)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT medida (#PCDATA)>
+]>
+
+
+<componentes>
+    <resistencia>
+        <nombre>Elias Machine</nombre>
+        <tipo>Peruano</tipo>
+        <precio>12,00</precio>
+        <medida>3cm</medida>
+    </resistencia>
+
+    <condensador>
+        <nombre>Alpine</nombre>
+        <tipo>Carromato</tipo>
+        <precio>10000€</precio>
+        <medida>3m</medida>
+    </condensador>
+
+</componentes>

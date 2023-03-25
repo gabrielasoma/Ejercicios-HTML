@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Esta siempre es la primera línea-->
+<!--Intento inventado gaby-->
+<!DOCTYPE bibliote SYSTEM "biblioteca.dtd">
+
+<biblioteca><!--raiz-->
+    <libro numero="1"> <!--atributo-->
+        <titulo>Matematicas e Historia</titulo><!--hijos-->
+        <autor>Maria Pumares</autor>
+        <editorial> amaya</editorial>
+        <isbn>978-158450403904</isbn>
+        <precio>16,00</precio>
+    </libro>
+    
+     <libro numero="2"> <!--atributo-->
+        <titulo>Ingeniera Informatica</titulo><!--hijos-->
+        <autor>Alonso Perez</autor>
+        <editorial> river media</editorial>
+        <isbn>978-84-9849-998-8</isbn>
+        <precio>19,00</precio>
+    </libro>
+</biblioteca>
+

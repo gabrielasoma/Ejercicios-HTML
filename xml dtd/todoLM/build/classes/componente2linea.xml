@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE componentes [
+    <!ELEMENT componentes (componente)+>
+    <!ELEMENT componente (nombre, precio, tipo,medida)>
+        <!ATTLIST componente id CDATA #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>  
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT medida (#PCDATA)>  
+]>
+
+
+
+<componentes>
+    <componente id="1">
+        <nombre>Resistencia</nombre>
+        <precio>30,00</precio>
+        <tipo>01</tipo>
+        <medida>30cm</medida>
+    </componente>
+    
+    <componente id="10">
+        <nombre>Condensador</nombre>
+        <precio>45,00</precio>
+        <tipo>01 y 02</tipo>
+        <medida>24cm</medida>
+    </componente>
+
+</componentes>

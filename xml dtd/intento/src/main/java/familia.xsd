@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <!--declarar raiz-->
+    <xs:element name="familia">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice>
+                    <xs:element ref="padre"></xs:element>
+                    <xs:element ref="madre"></xs:element>
+                </xs:choice>
+                <xs:element ref="hijos"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="codigo" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    
+    <!--atributo de raiz-->
+    <xs:attribute name="codigo">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]\d{2}\-\d{2}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <!--declarar hijos-->
+    <xs:element name="hijos">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:sequence>
+                    <xs:element ref="hijo"></xs:element>
+                    <xs:element ref="hija"></xs:element>
+                </xs:sequence>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+   
+    <!--relacion padre e hijo / max y min--> 
+    <xs:complexType name="datos_padres">
+        <xs:sequence>
+            <xs:element ref="nombre"></xs:element>
+            <xs:element ref="apellido" minOccurs="2" maxOccurs="2"></xs:element>
+            <xs:element ref="dni" minOccurs="0"></xs:element>
+            <xs:element ref="edad" minOccurs="0"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+     <xs:complexType name="datos_hijos">
+         <xs:complexContent>
+             <xs:extension base="datos_padres">
+                 <xs:attribute ref="pos" use="required"></xs:attribute> 
+             </xs:extension>
+         </xs:complexContent>  
+    </xs:complexType>
+    
+    
+    <!--relaciona los datos con la familia-->
+    <xs:element name="padre" type="datos_padres"/>
+    <xs:element name="madre" type="datos_padres"/>
+    <xs:element name="hijo" type="datos_hijos"/>
+    <xs:element name="hija" type="datos_hijos"/>
+    
+    <!--atributo hijos-->
+    <xs:attribute name="pos">
+        <xs:simpleType> 
+            <xs:restriction base="xs:positiveInteger">
+                <xs:maxInclusive value="30"></xs:maxInclusive>
+            </xs:restriction>      
+        </xs:simpleType>
+    </xs:attribute>
+    
+    <!--declarar la longitud-->
+    <xs:simpleType name="texto30">
+        <xs:restriction base="xs:string">
+            <xs:maxInclusive value="texto30"/>
+        </xs:restriction>
+    </xs:simpleType>
+   
+    <!--valores finales-->
+    <xs:element name="nombre" type="texto30"></xs:element>
+    <xs:element name="apellido" type="texto30"></xs:element>
+    <xs:element name="dni">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="\d{2}\.\d{3}\.\d{3}\-[A-Z]"/>
+            </xs:restriction>
+         </xs:simpleType>
+    </xs:element>
+    <xs:element name="edad" type="xs:positiveInteger"></xs:element>
+</xs:schema>

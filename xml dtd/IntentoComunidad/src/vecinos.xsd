@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name ="comunidad">
+        <xs:complexType><!--define un tipo complejo(contiene otros elementos y/o atributos)-->
+            <xs:sequence><!--especifica que los elementos secundarios deben aparecer en una secuencia.-->
+                <xs:element ref="vecino" minOccurs="1" maxOccurs="unbounded"/><!--/unbounded: ilimitado-->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    
+    <xs:element name ="vecino">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="apellido" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="portal" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="PisoLetra" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="CCC" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="cargo" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+              <xs:attribute name="ref" type="xs:integer"/><!--atributo-->
+        </xs:complexType>  
+    </xs:element>
+    
+    
+    <!--definir tipo de campo-->
+    <xs:element name="nombre" type="xs:string"/>
+    <xs:element name="apellido" type="xs:string"/>
+    <xs:element name="portal" type="xs:string"/>
+    <xs:element name="PisoLetra" type="xs:string"/>
+    <xs:element name="CCC" type="xs:string"/>
+    <xs:element name="cargo" type="xs:string"/>
+</xs:schema>

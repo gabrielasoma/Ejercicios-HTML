@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT deportistas (f1 | futbol | tenis)+>
+    
+<!ELEMENT f1 (#PCDATA)>
+    <!ATTLIST f1 pais (ESP | FRA | ITA | ALE) "ESP">
+
+<!ELEMENT futbol (#PCDATA)>
+    <!ATTLIST futbol pais (ESP | ALE | ITA | FRA) "ESP">
+
+<!ELEMENT tenis (#PCDATA)>

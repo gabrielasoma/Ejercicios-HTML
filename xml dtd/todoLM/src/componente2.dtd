@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <!ELEMENT componentes (componente)+>
+    <!ELEMENT componente (nombre, precio, tipo,medida)>
+        <!ATTLIST componente id CDATA #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>  
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT medida (#PCDATA)>  

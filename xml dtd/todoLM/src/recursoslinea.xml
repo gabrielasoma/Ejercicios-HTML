@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE recursos[
+    <!ELEMENT recursos (empleado)+> 
+    <!ELEMENT empleado (nombre,apellido+,edad,departamento,salario)> 
+        <!ATTLIST empleado numero CDATA #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
+    <!ELEMENT edad (#PCDATA)>
+    <!ELEMENT departamento (#PCDATA)>
+    <!ELEMENT salario (#PCDATA)>    
+]>
+
+
+<recursos>
+    <empleado numero="1">
+        <nombre>Antonio</nombre>
+        <apellido>Riesgo</apellido>
+        <edad>32</edad>
+        <departamento>Finanzas</departamento>
+        <salario>2500,00</salario>
+    </empleado>
+    
+    <empleado numero="10">
+        <nombre>Marta</nombre>
+        <apellido>Naranjo Medina</apellido>
+        <edad>40</edad>
+        <departamento>Contabilidad</departamento>
+        <salario>5000,00</salario>
+    </empleado>
+
+
+</recursos>

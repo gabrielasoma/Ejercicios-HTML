@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE deportistas SYSTEM "deporte.dtd">
+
+
+<deportistas>
+    <f1 pais="ALE">Sebastian Vettel</f1>
+    <f1>Alejandro</f1>
+    <f1 pais="ESP">Carlos Sainz</f1>
+    <futbol pais="ESP">Raul gonzales</futbol>
+    <tenis>Rafael Nadal</tenis>
+</deportistas>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE bdProductos [
+    <!ELEMENT bdProductos (producto)+>   
+        <!ATTLIST bdProductos codigo NMTOKEN #REQUIRED>
+    <!ELEMENT producto (nombre,codigo,categoria,iva,precio,descuento)>   
+     
+    <!ELEMENT nombre (#PCDATA)>   
+    <!ELEMENT codigo (#PCDATA)>   
+    <!ELEMENT categoria (#PCDATA)>   
+    <!ELEMENT iva (#PCDATA)>   
+    <!ELEMENT precio (#PCDATA)>   
+    <!ELEMENT descuento (#PCDATA)>   
+]>
+
+
+
+
+<bdProductos codigo="1">
+    
+    <producto>
+        <nombre>Teclado</nombre>
+        <codigo>C001</codigo>
+        <categoria>A</categoria>
+        <iva>21</iva>
+        <precio>15.00</precio>
+        <descuento>7</descuento>
+    </producto>
+    
+    <producto>
+        <nombre>Monitor</nombre>
+        <codigo>C002</codigo>
+        <categoria>B</categoria>
+        <iva>21</iva>
+        <precio>150.00</precio>
+        <descuento>10</descuento>     
+    </producto>
+    
+</bdProductos>

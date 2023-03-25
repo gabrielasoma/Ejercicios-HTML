@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE familia SYSTEM "familia.dtd">
+ <familia codigo="S01-07">
+    <padre>
+        <nombre>Benito</nombre>
+        <apellido>Sánchez</apellido>
+        <apellido>Gil</apellido>
+        <dni>77.987.555-E</dni>
+    </padre>
+    <madre>
+        <nombre>Mercedes</nombre>
+        <apellido>Juliá</apellido>
+        <apellido>Flores</apellido>
+    </madre>
+    <hijos>
+        <hija pos="1">
+            <nombre>Mercedes</nombre>
+            <apellido>Sánchez</apellido>
+            <apellido>Juliá</apellido>            
+        </hija>
+    </hijos>
+</familia>

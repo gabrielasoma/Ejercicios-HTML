@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE comunidad[
+    <!ELEMENT comunidad (vecino)+>
+    <!ELEMENT vecino (nombre,apellido+,portal,pisoLetra,CCC?,cargo)>
+      <!ATTLIST vecino ref CDATA #REQUIRED> 
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
+    <!ELEMENT portal (#PCDATA)>
+    <!ELEMENT pisoLetra (#PCDATA)>
+    <!ELEMENT CCC (#PCDATA)> 
+    <!ELEMENT cargo (#PCDATA)>
+]>
+
+
+ 
+<comunidad xsi:noNamespaceSchemaLocation="vecino.xsd"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <vecino ref="1">
+        <nombre>david</nombre>
+        <apellido>sanchez</apellido>
+        <apellido>garcia</apellido>
+        <portal>123</portal>
+        <pisoLetra>5C</pisoLetra>
+        <CCC>2000 2332 2323</CCC>
+        <cargo>Presidente</cargo>
+    </vecino>
+    
+    
+    <vecino ref="10">
+        <nombre>Elena</nombre>
+        <apellido>Perez</apellido>
+        <portal>48</portal>
+        <pisoLetra>2B</pisoLetra>
+        <cargo>vicepresidenta</cargo>
+    </vecino>
+
+</comunidad>

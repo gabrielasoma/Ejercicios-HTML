@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "biblioteca.dtd">
+
+<biblioteca>    
+    <libro numero="1">
+        <titulo>Fisica</titulo>
+        <autor>Maria</autor>
+        <editorial>AMAYA</editorial>
+        <isbn>9986-445-23</isbn>
+        <precio>12,00</precio>
+    </libro>
+    
+    <libro numero="2">
+        <titulo>mates</titulo>
+        <autor>alonso</autor>
+        <editorial>river</editorial>
+        <isbn>653456-86765</isbn>
+        <precio>17,00</precio>
+    </libro>
+        
+</biblioteca>
+

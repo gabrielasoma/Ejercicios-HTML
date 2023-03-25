@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--DTD-->
+<!DOCTYPE cine[
+<!ELEMENT cine (peliculas, directores)>
+
+<!--Peliculas-->
+<!ELEMENT peliculas (pelicula)+>
+<!ELEMENT pelicula (#PCDATA)>
+        <!ATTLIST pelicula codepel ID #REQUIRED>
+
+<!--Director-->
+<!ELEMENT directores (director)+>
+<!ELEMENT director (#PCDATA)>
+        <!ATTLIST director filmografia IDREFS #REQUIRED>
+]>
+
+<cine>
+    <peliculas>
+        <pelicula codepel="p1">Avatar</pelicula>
+        <pelicula codepel="p2">MysticRiver</pelicula>
+        <pelicula codepel="p3">TheTerminator</pelicula>
+        <pelicula codepel="p4">Titanic</pelicula>
+    </peliculas>
+    <directores>
+        <director filmografia = "p2">Clint Estwood</director>
+        <director filmografia = "p1 p2 p3 p4">Clint Estwood</director> 
+    </directores>
+</cine>
+
+

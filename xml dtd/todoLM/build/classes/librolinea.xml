@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE biblioteca [
+<!ELEMENT biblioteca (libro)+>
+<!ELEMENT libro (titulo,autor+,editorial,isbn,precio)+>
+<!ATTLIST libro numero CDATA #REQUIRED>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT editorial (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+]>
+
+
+<biblioteca>
+    <libro numero="1">
+        <titulo>Fisica</titulo>
+        <autor>Hola</autor>
+        <editorial>river</editorial>
+        <isbn>7686645645</isbn>
+        <precio>12,00</precio>
+    </libro>
+        
+
+    <libro numero="10">
+        <titulo>Mates</titulo>
+        <autor>Hola</autor>
+        <editorial>river</editorial>
+        <isbn>7686645645</isbn>
+        <precio>12,00</precio>
+    </libro>
+</biblioteca>

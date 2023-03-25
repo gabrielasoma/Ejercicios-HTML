@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "biblioteca.dtd" >
+<!--declarar el nodo raiz de nuestro xml-->
+
+<biblioteca><!--raiz-->
+    <libro numero="1"><!--atributo-->
+        <titulo>Física y animación</titulo><!--hijo-->
+        <autor>Kenny erliben</autor>
+        <editorial>river media</editorial>
+        <isbn>978-158450403904</isbn>
+        <precio>12,00</precio>
+    </libro>
+    
+    <libro numero="100">
+        <titulo>Seguridad informática</titulo>
+        <autor>Carlos Guerra</autor>
+        <editorial>DYKINSON</editorial>
+        <isbn>978-84-9849-998-8</isbn>
+        <precio>20,00</precio>
+    </libro>
+</biblioteca>
+
+

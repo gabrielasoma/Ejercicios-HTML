@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE cine [
+    <!ELEMENT cine (peliculas, directores)>
+    
+    <!ELEMENT peliculas (pelicula)+>
+    <!ELEMENT pelicula (#PCDATA)>
+        <!ATTLIST pelicula cp ID #REQUIRED>
+    
+    <!ELEMENT directores (director)+>
+    <!ELEMENT director (#PCDATA)>
+        <!ATTLIST director d IDREFS #REQUIRED>
+]>
+
+
+<cine>
+    <peliculas>
+        <pelicula cp="p1">Avatar</pelicula>
+        <pelicula cp="p2">Vengadores</pelicula> 
+        <pelicula cp="p3">Frozen</pelicula>     
+        <pelicula cp="p4">Frozen</pelicula>
+
+    </peliculas>
+
+    <directores>
+        <director d="p2">Jose</director>
+        <director d="p1 p2 p3 p4">Carmen</director>
+    </directores>
+
+</cine>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    <xs:element name="comunidad">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="vecino" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    
+     <xs:element name="vecino">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                <xs:element ref="apellido" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                <xs:element ref="portal" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                <xs:element ref="pisoLetra" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                <xs:element ref="CCC" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                <xs:element ref="cargo" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+                <xs:attribute name="ref" type="xs:integer"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    
+    
+    <xs:element name="nombre" type="xs:string"></xs:element>
+    <xs:element name="apellido" type="xs:string"></xs:element>
+    <xs:element name="portal" type="xs:string"></xs:element>
+    <xs:element name="pisoLetra" type="xs:string"></xs:element>
+    <xs:element name="CCC" type="xs:string"></xs:element>
+    <xs:element name="cargo" type="xs:string"></xs:element>
+   
+</xs:schema>

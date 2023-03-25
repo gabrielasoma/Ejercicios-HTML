@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <!ELEMENT componentes (resistencia | condensador)+>
+    
+    <!ELEMENT resistencia (nombre,tipo,precio,medida)>
+    <!ELEMENT condensador (nombre,tipo,precio,medida)>
+
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT medida (#PCDATA)>

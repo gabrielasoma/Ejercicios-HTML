@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<!DOCTYPE bdProductos SYSTEM "almacenInformatico.dtd">
+-->
+
+
+<!--
+Hay 10 tipos de descuento
+-El precio es un decimal con dos decimales
+-La categoria puede ser A, B, C, D,E
+-->
+
+<bdProductos codigo="1" xsi:noNamespaceSchemaLocation="bdProductos.xsd"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+    <producto>
+        <nombre>teclado</nombre>
+        <codigo>C001</codigo>
+        <categoria>A</categoria>
+        <iva>21</iva>
+        <precio>15.00</precio>
+        <descuento>7</descuento> 
+    </producto>
+   
+    <producto>
+        <nombre>monitor</nombre>
+        <codigo>C002</codigo>
+        <categoria>B</categoria>
+        <iva>21</iva>
+        <precio>150.00</precio>
+        <descuento>10</descuento> 
+    </producto>   
+    
+</bdProductos>
