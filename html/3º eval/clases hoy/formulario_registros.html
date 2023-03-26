@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Formulario_registros</title>
+ <link rel="stylesheet"   href="estilos.css"/> 
+ <script type="text/javascript" src="validacion.js"></script>   
+</head>
+<body>
+<h1>CONTACTA CON NOSOTROS</h1>
+<form action="" method="POST" class="form-registro" onsubmit="return validar();"> 
+    <div class="contenedor-inputs">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="input-48">    
+    
+        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" class="input-48">
+        
+        <input type="text" id="correo" name="correo" placeholder="Correo" class="input-100">
+        
+        <input type="text" id="edad" name="usuario" placeholder="edad" class="input-48">
+                     
+        <input type="text" id="telefono" name="telefono" placeholder="Telefono" class="input-100">
+		 <textarea name="textarea" rows="10" cols="50"></textarea>
+		         
+        <input class="btn-enviar" type="submit" value="Registrar" onclick="validacion()">
+        
+        <p class="form-link">¿Ya tienes una cuenta?<a href="#">Ingresa aqui</a></p>
+    </div> 
+</form>
+</body>
+ </html>
+ 
