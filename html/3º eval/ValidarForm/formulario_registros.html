@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Formulario_registros</title>
+ <link rel="stylesheet"   href="estilos.css"/> 
+
+ <script type="text/javascript" src="validacion.js"></script> 
+ <style>
+	 #galeria{
+		 width: 100%;
+		 margin: auto;
+		 margin-top: 25px;
+
+	 }
+	 .efectos{
+		 width: 100%;
+		 display: flex;
+		 justify-content: space-around;
+	 }
+	 .efectos img{
+		width: 300px;
+		height: 300px;
+		padding-left:15px;
+
+	 }
+	 button{
+		 cursor: pointer;
+	 }
+	 
+	 img{
+		 width: 100px;
+		 height: 89px;
+	 }
+	 
+	 .botones{
+		 display: flex;
+		 justify-content: space-around;
+		 margin-top: 25px;
+	 }
+	#publicidad{
+		width: 500px;
+		height: 600px;
+		background: URL(PUBLIDAD.gif);
+	}
+	#anuncio{
+		position: relative;
+		width: 100%;
+	}
+
+	.barra{
+		width: 100%;
+		height: 40px;
+		position: absolute;
+		background:#ccc;
+
+	}
+	#cerrar{
+	color: red;
+    float: right;
+	font-size:  14pt;
+	}
+
+ </style>  
+ <script type = "text/javascript" src= "validacion.js"></script>
+
+ <script src="jquery-3.6.0.min.js"></script>
+ <script src="cerrar.js"></script>
+
+
+</head>
+<body>
+<main>
+<!--PUBLICIDAD-->
+<section id = "publicidad">
+	<div id ="anuncio">
+		<div class="barra">
+			<span id="cerrar">X</span>
+		</div>
+		<script>
+			$('#cerrar').on("click",function(){
+ 	     	$('#publicidad').remove();
+			});
+
+		</script>
+
+	</div>	
+</section>
+
+<table>
+<thead>
+<h3>CONTACTA CON NOSOTROS</h3>
+</thead>
+
+<form action="" method="POST"  style="padding-left:20px" onsubmit="validacion()"> 
+    <div class="contenedor-inputs">
+	<tbody>
+	<tr>
+	<td>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre">    
+    </td>
+	<td>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+     </td>
+
+	<td>	
+        <input type="text" id="correo" name="correo" placeholder="Correo">
+	</td>
+	<td> 
+        <input type="text" id="edad" name="edad" placeholder="Edad">
+	</td>   
+	</tr> 
+	<tr>
+		<td>
+        <input type="text" id="telefono" name="telefono" placeholder="Telefono">
+		</td>
+		<td>
+		 <input type="usuario" id="usuario" name="usuario" placeholder="Usuario">
+		</td>
+		<table>
+			<section id="galeria">
+				<div class= "efectos">
+				<td><img id="fotouno" src="1.jpg" ></td>
+				<td><img id="fotodos" src="2.jpg" ></td>
+				<td><img id="fototres" src="3.jpg" ></td>
+				<td><img id="fotocuatro" src="4.jpg" ></td>
+		    	</div>
+		  	</section>
+		<div class=" botones">
+			<section id="efectos">
+				<td><button id="btnuno"></button>Foto 1</td>
+				<td><button id="btndos"></button>Foto 2</td>
+				<td><button id="btntres"></button>Foto 3</td>
+				<td><button id="btncuatro"></button>Foto 4</td>
+			</div>	
+			<script src= "efectosAnim.js"></script>			
+		</section>
+		
+	</tr>
+		<tr>
+		<td>
+        <input class="btn-enviar" type="submit" value="Registrar" onclick="">
+        </td>
+		<td>
+        <p class="form-link">¿Ya tienes una cuenta?<a href="#">Ingresa aqui</a></p>
+		</td>
+		</tr>
+	</tbody>
+	</div> 
+</form>
+
+</table>
+    
+</main>    
+</body>
+ </html>
+
+
+ 
+
+
+

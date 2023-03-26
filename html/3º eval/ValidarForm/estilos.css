@@ -1,0 +1,30 @@
+*{box-sizing: border-box;}
+
+main{width: 30%;margin: 0 auto; font-family: sans-serif}
+h3{
+    color: white;
+    text-align: center;
+	padding-top: 10px;
+    
+}
+table{width:60%;margin:0 auto}
+form{width: 60%;margin: auto}
+
+
+input[type="submit"]{
+	width: 80%; padding: 7px 0;border:2px solid #454545
+	
+}
+input[type="text"]{
+	border:2px solid #454545
+	
+}
+
+
+
+
+
+
+
+
+
