@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var cantidad = Number(prompt("Introduce la cantidad a invertir"))
+        switch(true){
+        case cantidad > 1000 && cantidad <=5000:
+             montante = cantidad + cantidad*0.2;
+             totales = montante.toFixed(2);
+             document.write("Beneficio obtenido: " + totales + "€");
+        break;
+        case cantidad > 5000 && cantidad <= 10000:
+             montante = cantidad + cantidad*0.3;
+             totales = montante.toFixed(2);
+             document.write("Beneficio obtenido: " + totales + "€");
+        case cantidad > 1000 && cantidad <= 50000:
+             montante = cantidad + cantidad*0.7;
+             totales = montante.toFixed(2);
+             document.write("Beneficio obtenido: " + totales + "€");
+             alert("Lo sentimos la inversion tiene que ser superior")
+        break;
+            }
+
+    </script>
+</body>
+</html>

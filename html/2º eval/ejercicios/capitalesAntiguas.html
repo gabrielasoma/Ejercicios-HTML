@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <h2>
+        Capitales antiguas de España
+ 
+    </h2>
+    <ol>
+        <li> Burgos</li>
+        <li> Valladolid</li>
+        <li> Toledo</li>
+ 
+    </ol>
+    <script>
+       var elemento =document.createElement("li");
+       contenido =document.createTextNode ("Madrid");
+       elemento.appendChild(contenido);
+       var padre =document.getElementsByTagName("li")[0].parentNode,
+       tercerelemento = document.getElementsByTagName("li")[2];
+        padre.insertBefore (elemento,tercerelemento);
+    </script>
+</body>
+</html>
+ 
+ 

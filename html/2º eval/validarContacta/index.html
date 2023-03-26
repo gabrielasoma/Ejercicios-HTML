@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Formulario_registros</title>
+ <link rel="stylesheet"  href="estilos.css"/> 
+ <script src="validarjs.js"></script>   
+</head>
+<body>
+
+
+<h1>FORMULARIO DE REGISTRO</h1>  
+<form action="" method="post">
+    <h2 class="form-titulo">CREA TU CUENTA</h2>
+    <div class="contenedor-inputs">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="input-48">    
+    
+        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" class="input-48">
+        
+        <input type="text" id="correo" name="correo" placeholder="Correo" class="input-100">
+        
+        <input type="text" id="usuario" name="usuario" placeholder="Usuario" class="input-48">
+        
+        <input type="password" id="clave" name="clave" placeholder="Contraseña" class="input-48">
+        
+        <input type="text" id="telefono" name="telefono" placeholder="Telefono" class="input-100">
+        
+        <label>Currículum Vitae</label>
+        <input id="archivo" type="file" name="cv" required>
+        
+        <input class="btn-enviar" type="submit" value="Registrar" onclick="validar()">
+        
+        <p class="form-link">¿Ya tienes una cuenta?<a href="#">Ingresa aqui</a></p>
+    </div> 
+</form>
+    
+    
+</body>
+ </html>

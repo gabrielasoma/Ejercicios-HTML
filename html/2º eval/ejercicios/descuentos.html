@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuento con condicional if</title>
+    <style>
+        main{width:80%; margin: 0 auto; padding-top:25px}
+        section{width: 30%; margin: auto; background: #ccc;
+        border: 6px solid teal;line-height: 75px; padding: 25px 100px;
+        font-family: serif; font-size: 12pt; height: 500px; border-radius: 30px;
+    }
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <h2>Calcula tu factura de compra aquí</h2>
+        <script>
+            var producto = prompt("Introduce el nombre del producto");
+            var cantidad = Number(prompt("Introduce la cantidad comprada"));
+            var precio = Number(prompt("Precio del productos"));
+            var iva = 0.21;
+            importe = cantidad * precio;
+                if(cantidad > 10){
+                 alert("Felicitaciones, tienes descuento!");
+                 descuento = importe - importe*10/100;
+
+                }else{
+                 alert("Lo siento, NO tienes descuento!");
+                 descuento = importe - importe*0;
+                }
+                ImporteTotal = descuento + descuento*iva;
+                document.write("<b>Producto: </b> " + producto + "</br><b>Cantidad: </b> " + cantidad
+                + "</br><b>IVA aplicable: </b> " + iva +  "</br><b>Importe Total: </b> " + ImporteTotal);
+                
+         </script>
+
+
+
+    </section>
+</main>
+</body>
+</html>

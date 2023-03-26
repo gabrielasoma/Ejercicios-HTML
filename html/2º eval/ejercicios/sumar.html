@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumar Datos Desde Un Formulario</title>
+    <style>
+        main{width: 20%; margin:auto; background: #000; color: #fff; padding: 5px 20px}
+        input[type="button"]{
+            padding: 5px 10;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <fieldset>
+            <legend>Ingresa dos números</legend>
+            <label>NUMERO1:</label>
+            <input type="text" id="num1">
+            <br></br>
+            <label>NUMERO2:</label>
+            <input type="text" id="num2">
+            <br></br>
+            <input type="button" onclick="sumar();" value="calcular">
+        </fieldset>
+        <script>
+        /*necesito crear una funcion*/
+        function sumar(){
+            var n1 = document.getElementById('num1').value;
+            var n2 = document.getElementById('num2').value;
+
+            suma = Number(n1) + Number(n2);
+            resultado = suma;
+            document.write("<h4>El resultado de la suma es: <h4>" + suma);
+        }
+        </script>
+    </main>
+</body>
+</html>

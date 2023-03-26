@@ -1,0 +1,35 @@
+ 
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entorno Natural </title>
+</head>
+<body>
+    <h2>
+        Entorno Natural Madrid
+ 
+    </h2>
+<ul>
+    <li>Río manzanares</li>
+    <li>Río Guadarrama</li>
+    <li>Sierra de Guadarrama</li>
+   
+ 
+</ul>
+<script>
+    var elemento =document.createElement("li");
+    contenido =document.createTextNode ("Sierra Norte");
+    elemento.appendChild(contenido);
+    var padre =document.getElementsByTagName("li")[0].parentNode,
+    tercerelemento = document.getElementsByTagName("li")[2];
+     padre.insertBefore (elemento,tercerelemento);
+ 
+ </script>
+   
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar el DOM</title>
+</head>
+<body>
+    <div id="titulo"></div>
+    <p id="parrafo">
+    Madrid es un municipio y una ciudad de España, con categoría histórica de villa.9​Constituye la capital del Estado10​ y de la Comunidad de Madrid. En su término municipal, el más poblado de España, 
+    viven 3 305 408 personas empadronadas, según el INE de 2021, lo que la convierte en la segunda ciudad más poblada de la Unión Europea, por detrás de Berlín. Su área metropolitana tiene 6 779 888 habitantes,11​ la segunda más poblada de la Unión Europea tras la de París, en otras fuentes detrás también de la Región del Ruhr
+    </p>
+
+    <p>
+    La ciudad cuenta con un PIB nominal de 133 129 millones de euros –el 12% del PIB nacional– y un PIB per cápita nominal de 41 600 € (2018), siendo la 1.ª área metropolitana española en actividad económica ––19% del PIB.16​ 
+    Es también la primera en más pernoctaciones hoteleras.
+    </p> 
+
+    <p>
+    En calidad de capital de España, alberga las sedes del Gobierno de España y sus Ministerios, de las Cortes Generales (Congreso y Senado), del Tribunal Supremo y del Tribunal Constitucional, así como la residencia oficial de los reyes de España18​ y del presidente del Gobierno. En el plano económico, 
+    es la cuarta ciudad más rica de Europa, tras Londres, París y Moscú.
+    </p>
+
+    <p>
+    En 2009, el 50,1 % de los ingresos de las 5000 principales empresas españolas son generados por sociedades con sede social en Madrid, que suponen el 31,8 % de ellas.20​ Es sede del 4.ª mayor mercado de valores de Europa,21​ 2.ª en el ámbito iberoamericano (Latibex) y de varias de las más grandes corporaciones del mundo.22​23​ Es la 8.ª ciudad del mundo con mayor presencia de multinacionales, 
+    tras Pekín y Milán y por delante de Dubái, París y Nueva York
+    </p>
+
+    <script>
+        var parrafo = document.getElementById("parrafo");
+        parrafo.style.background="green";
+        parrafo.style.textAlign= "justify";
+        //crear un nodo nuevo un titulo h1
+        //1º paso: crear el elemento nodo
+        var elemento = document.createElement("h1");
+        //2º paso: crear el contenido del elemento
+        var contenido = document.createTextNode("Capital de España");
+        //3º paso: añadir al elemento creado su contenido
+        elemento.appendChild(contenido);
+        //4º paso: acceder a los atributos del elemento 
+        elemento.setAttribute("align","center");
+        //5º paso: Agregar el elemento al documento
+        document.getElementById("titulo").appendChild(elemento);
+
+
+
+
+    </script>
+
+    
+
+</body>
+</html>

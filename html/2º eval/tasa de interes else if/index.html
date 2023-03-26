@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppFinanciera</title>
+    <style>
+        main{width: 30%; margin: auto; background: #000; color: #fff; padding: 5px 20px;}
+        input{width: 80%; margin-left: 20px}
+        input[type="button"]{width: 50%; margin-left: 50px}
+        select{padding: 5px; margin-left: 20px;}
+        label{margin-left: 50px}
+        h4{font-family: monospace; font-size: 12pt}
+    </style>
+</head>
+<body>
+    <main>
+        <fieldset>
+            <h4>Aplicacion financiera</h4>
+            <label>Cantidad</label>
+            <input type="text" id="cantidad">
+            <br/><br/>
+            <label>Tiempo</label>
+            <input type="text" id="tiempo">
+            <br/><br/>
+            <label>Importe Total</label>
+            <input type="text" id="resultado">
+            <br/><br/>
+            <input type="button" onclick="financiera();" value="CALCULAR">
+        </fieldset>
+        <script src="financiera.js"></script>
+    </main>
+</body>
+</html>

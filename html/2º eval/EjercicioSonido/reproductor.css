@@ -1,0 +1,74 @@
+body
+        {
+            text-align: center;    
+        }
+        #reproductor
+        {
+            margin-top: 300px;
+            width:210px;
+            height:100px;
+            margin: 20px auto;
+            padding: 5px;
+            background-image: linear-gradient(rgb(11, 127, 165),rgba(44, 98, 247, 0.753));
+            border: 1px solid #666;
+            border-radius: 5px;
+        }
+        .cover{
+            width: 20%;
+            margin: auto;
+        }
+        #botones
+        {
+            float: left;
+            width: 100%;
+            height: 15px;
+            padding-bottom: 10px;
+
+        }
+        #barra
+        {
+            margin-top:10px; 
+            position: relative;
+            float: left;
+            width: 200px;
+            height: 50px;
+            margin-left: 1px;
+            height: 10px;
+            background:#eeeeee;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+        }
+        #progreso
+        {
+            position: absolute;
+            height:10px;
+            background: rgba(255,0,0,1);
+            max-width: 100%;
+            border-radius: 50px;
+        }
+        #reproducir
+        {
+            width: 100px;
+            height: 30px;
+            border-radius: 15px;
+            margin-left: 8px;
+            padding-top: 0px;
+            font-size: 20px;
+            font-family: berlin sans fb;
+            box-shadow: red 0px 0px 10px;
+            background-image: radial-gradient(rgba(255, 37, 37, 0.753),rgb(247, 73, 110));
+            outline: none;
+        }
+        #reproducir:hover{
+            background-image: radial-gradient(rgb(68, 243, 52),rgb(150, 228, 135));
+            color: black;
+            box-shadow: rgb(230, 247, 157) 0px 0px 10px;
+        }
+        #reproducir:{
+            background: red;
+        }
+
+        #imagen{
+        height: 50px;
+        width: 50px;
+        }

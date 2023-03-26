@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuento con condicional if</title>
+    <style>
+        main{width:80%; margin: 0 auto; padding-top:25px}
+        section{width: 30%; margin: auto; background: #ccc;
+        border: 6px solid teal;line-height: 75px; padding: 25px 100px;
+        font-family: serif; font-size: 12pt; height: 500px; border-radius: 30px;
+    }
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <h2>Calcula financiero</h2>
+        <script>
+            var cantidad = Number(prompt("Introduce la cantidad a invertir"));
+            impuestos = 0.21;
+            if(cantidad >1000 && cantidad <= 5000){
+                beneficios = cantidad * 0.2;
+            }else if( cantidad >5000 && cantidad <= 10000){
+                beneficios = cantidad * 0.3;
+            }else if(cantidad >10000 && cantidad <= 50000){
+                beneficios = cantidad * 0.5;
+            }else if(cantidad >50000){
+                beneficios = cantidad * 0.7;
+            }else{
+                alert("Lo sentimos la cantidad tiene que ser superior a 1000");
+            }
+            ganancias = beneficios - beneficios*0.21;
+            montante = cantidad + ganancias;
+            document.write("<b>Cantidad Invertida</b>" + cantidad + 
+            "</br><b>Impuestos Aplicados</b>" + impuestos + 
+            "</br><b>Ganancias obtenidas</b>" + ganancias + 
+            "</br><b>Montante</b>" + montante);
+         </script>
+    </section>
+</main>
+</body>
+</html>

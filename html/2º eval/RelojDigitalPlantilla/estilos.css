@@ -1,0 +1,64 @@
+*{
+	
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background:url("fondo.jpg") #000;
+	background-size:cover;
+	color:#fff;
+	font-size: 16px;
+}
+.wrap{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	
+}
+.widget{
+	display : flex; justify-content:center;
+	width: 40%;
+	margin: 2em;
+	
+	
+}
+/*VOY A PONER LOS PARRAFOS UNO AL LADO DEL OTRO*/
+.widget p{display: inline-block; line-height: 1em;}
+
+.fecha{
+	font-family: impact, arial;
+	text-align: center;
+	font-size: 1.5em;
+	margin-bottom: 5px;
+	background: rgba(0,0,0,0.5);
+	padding: 20px;
+	width: 100%;
+	
+	
+}
+.reloj{
+	font-family: impact, arial;
+	width: 100%;
+	padding: 20px;
+	font-size: 2em;
+	text-align: center;
+	background: rgba(0,0,0,0.5);
+	
+	
+}
+.reloj .caja-segundos{
+	display: inline-block;
+	
+	
+}
+.reloj .segundos, 
+.reloj .ampm
+{
+	font-size: 0.5em;
+	display: block;
+	
+}
+/* al final quitamos los datos que tenía para crerlo dinamicamente*/
+
+

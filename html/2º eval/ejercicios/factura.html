@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+</head>
+<body>
+    <h2>MOSTRAR FACTURA DE TU COMPRA</h2>
+    <script>/*var: variables globales, cuando es local no hacec falta poner nada*/
+        var producto = prompt("Nombre del \n Producto");
+        var cantidad = Number(prompt("Cantidad"));
+        var precio = Number(prompt("Precio del producto\n por Unidad"));
+        var iva = 0.21;
+        importe = cantidad * precio;
+        importeTotal = importe + importe*iva;
+        document.write("<br><b>Producto:</b> " + producto
+        + "<br><b>Cantidad</b> " + cantidad + "<br><b>IVA: </b>" 
+        + iva +"<br><b>Importe Total:</b> " + importeTotal +"€");
+        
+        
+
+    </script>
+</body>
+</html>

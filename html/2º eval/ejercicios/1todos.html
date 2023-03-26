@@ -1,0 +1,387 @@
+<!-------------------------APP FINANCIERA_MULTICONDICIONAL ----------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuento con condicional if</title>
+    <style>
+        main{width:80%; margin: 0 auto; padding-top:25px}
+        section{width: 30%; margin: auto; background: #ccc;
+        border: 6px solid teal;line-height: 75px; padding: 25px 100px;
+        font-family: serif; font-size: 12pt; height: 500px; border-radius: 30px;
+    }
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <h2>Calcula financiero</h2>
+        <script>
+            var cantidad = Number(prompt("Introduce la cantidad a invertir"));
+            impuestos = 0.21;
+            if(cantidad >1000 && cantidad <= 5000){
+                beneficios = cantidad * 0.2;
+            }else if( cantidad >5000 && cantidad <= 10000){
+                beneficios = cantidad * 0.3;
+            }else if(cantidad >10000 && cantidad <= 50000){
+                beneficios = cantidad * 0.5;
+            }else if(cantidad >50000){
+                beneficios = cantidad * 0.7;
+            }else{
+                alert("Lo sentimos la cantidad tiene que ser superior a 1000");
+            }
+            ganancias = beneficios - beneficios*0.21;
+            montante = cantidad + ganancias;
+            document.write("<b>Cantidad Invertida</b>" + cantidad + 
+            "</br><b>Impuestos Aplicados</b>" + impuestos + 
+            "</br><b>Ganancias obtenidas</b>" + ganancias + 
+            "</br><b>Montante</b>" + montante);
+         </script>
+    </section>
+</main>
+</body>
+</html>
+
+<!-------------------------------ARRAY ALUMNOS ----------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle while</title>
+    <script>
+        /*La declaración de let nunca puede utilizarse como argumentos de una funcion, 
+        let, tiene que definirse antes function()*/
+        function suma(numero1,numero2){
+            var numero1 = 10;
+            var numero2 = 20;
+            return numero1+numero2;
+        }
+        document.write(suma(1200,200)); 
+        document.write("<br/>");
+        document.write(suma(50,50));      
+    </script>
+</head>
+<body></body>
+</html>
+
+<!-------------------------------ARRAY BASICO ----------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array basico</title>
+</head>
+<body>
+    <script>
+        //definir un array
+        let decadas = [1950,1960,1970,1980,1990,2000,2010];
+        document.write(decadas[6] + "<br/>");
+        document.write("La longitud del array es: " + decadas.length);//importante
+        decadas.push(2020,2030,2040,2050);
+        document.write("Mi nueva longitud es: " + decadas.length + "<br/>");
+       //recorrer e imprimir un array con el bucle FOR
+            for(i = 0; i < decadas.length; i++){
+                    document.write(decadas[i] + " ");
+            }        
+    </script>
+</body>
+</html>
+
+<!----------------------------------DESCUENTO -------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuento con condicional if</title>
+    <style>
+        main{width:80%; margin: 0 auto; padding-top:25px}
+        section{width: 30%; margin: auto; background: #ccc;
+        border: 6px solid teal;line-height: 75px; padding: 25px 100px;
+        font-family: serif; font-size: 12pt; height: 500px; border-radius: 30px;}
+    </style>
+</head>
+<body>
+        <main>
+            <section>
+                <h2>Calcula tu factura de compra aquí</h2>
+                <script>
+                    var producto = prompt("Introduce el nombre del producto");
+                    var cantidad = Number(prompt("Introduce la cantidad comprada"));
+                    var precio = Number(prompt("Precio del productos"));
+                    var iva = 0.21;
+                    importe = cantidad * precio;
+                        if(cantidad > 10){
+                        alert("Felicitaciones, tienes descuento!");
+                        descuento = importe - importe*10/100;
+                        }else{
+                        alert("Lo siento, NO tienes descuento!");
+                        descuento = importe - importe*0;
+                        }
+                        ImporteTotal = descuento + descuento*iva;
+                        document.write("<b>Producto: </b> " + producto + "</br><b>Cantidad: </b> " + cantidad
+                        + "</br><b>IVA aplicable: </b> " + iva +  "</br><b>Importe Total: </b> " + ImporteTotal);              
+         </script></section></main> </body></html>
+
+<!----------------------------------EVENTOS_BOTONES -------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos asociados a botones</title>
+    <script>
+        function  inicializar(){
+            var btnRojo;
+            var btnAzul; 
+            btnRojo = document.getElementById('btnRojo');
+            //con la siguiente linea estoy generando un evento
+            btnRojo.addEventListener("click",btnRojoClic);
+            btnAzul = document.getElementById('btnAzul');
+            //generador de eventos para el boton azul
+            btnAzul.addEventListener("mouseover",btnAzulClic);
+        }
+        function btnRojoClic(){
+            var titulo;
+            titulo = document.getElementById('encabezado')
+            titulo.style.color = "red";
+            titulo.style.textAlign = "center";
+        }
+        function btnAzulClic(){
+            var titulo;
+            titulo = document.getElementById('encabezado')
+            titulo.style.color = "blue";
+            titulo.style.textAlign = "center";
+        }
+    </script>
+</head>
+<body onload="inicializar()">
+    <h1 id="encabezado">Encabezado de la página principal</h1>
+    <input type="button" value="color Rojo" id="btnRojo"> 
+    <input type="button" value="color Azul" id="btnAzul">
+</body>
+</html>
+
+<!----------------------------------EVENTOS MULTIPLES ----------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos sobre la página HTML</title>
+    <style>
+        main{width: 40%; margin: 0 auto}
+    </style>
+    <script>
+        function obtenerdatos(){
+            var nombre = document.getElementById('nombre').value;
+            var edad = document.getElementById('edad').value;
+            document.registros.nombreobtenido.value = nombre;
+            document.registros.edadobtenida.value = edad;
+        }
+    </script>
+</head>
+<body onload="alert('Bienvenido, no olvides rellenar el formulario')">
+    <main>
+    <h2 onmouseover="cambio(this)">BIENVENIDOS A LOS DE DATOS MEDIANTE EVENTOS</h2>
+    <form name="registros">
+        <table border="1">
+            <caption>Datos Enviados</caption>
+            <tr>
+                <td>Nombre:</td><td><input type="text" name="nombre" id="nombre" onfocus="foco(this)" onblur="nofoco(this)"></td>
+            </tr>
+            <tr>
+                <td>Edad:</td><td><input type="text" name="edad" id="edad" onfocus="foco(this)" onblur="nofoco(this)"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" name="datos" value="Enviar Datos" onclick="obtenerdatos(this)">
+                <input type="reset" name="borrar" id="borrar" value="Borrar Datos">
+                </td>
+            </tr>
+        </table>
+        <!--A PARTIR DE AQUI GENEREAMOS EL JAVASCRIPT-->
+        <script>
+            //foco para evento focus,no foco para evento onblur,cambio para onchange,cargar para onload
+            function foco(elemento){//focus
+                elemento.style.border = "3px solid red";
+                elemento.style.background = "lightblue";
+            }
+            //no foco para evento onblur
+            function nofoco(elemento){
+                elemento.style.border = "1px solid red";
+                elemento.style.background = "lightgreen";
+            }
+            //cambio para onchange
+            function cambio(elemento){
+                elemento.style.fontSize = "30px";
+                elemento.style.background = "green";
+                elemento.style.textAlign = "center";
+                elemento.style.color = "gold";
+            }
+            //cargar para onload
+            function cargar(elemento){         
+                elemento.style.background = "gray";  
+            }
+        </script>
+      <br/> <br/> <br/>
+      <table border="1">
+        <caption>Datos Recibidos</caption>
+        <tr>
+            <td>Nombre:</td><td><input type="text" name="nombreobtenido" id="nombreobtenido"></td>
+        </tr>
+
+        <tr>
+            <td>Edad:</td><td><input type="text" name="edadobtenida" id="edadobtenida"></td>
+        </tr>
+      </table>
+    </form>
+</main>  
+</body>
+</html>
+
+<!----------------------------------FACTURA-------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+</head>
+<body>
+    <h2>MOSTRAR FACTURA DE TU COMPRA</h2>
+    <script>/*var: variables globales, cuando es local no hacec falta poner nada*/
+        var producto = prompt("Nombre del Producto");
+        var cantidad = Number(prompt("Cantidad"));
+        var precio = Number(prompt("Precio del producto\n por Unidad"));
+        var iva = 0.21;
+        importe = cantidad * precio;
+        importeTotal = importe + importe*iva;
+        document.write("<br><b>Producto:</b> " + producto
+        + "<br><b>Cantidad</b> " + cantidad + "<br><b>IVA: </b>" 
+        + iva +"<br><b>Importe Total:</b> " + importeTotal +"€");
+    </script>
+</body>
+</html>
+
+<!----------------------------------SUMAR-------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumar Datos Desde Un Formulario</title>
+    <style>
+        main{width: 20%; margin:auto; background: #000; color: #fff; padding: 5px 20px}
+        input[type="button"]{padding: 5px 10; margin-left: 50px;}
+    </style>
+</head>
+<body>
+    <main>
+        <fieldset>
+            <legend>Ingresa dos números</legend>
+            <label>NUMERO1:</label>
+            <input type="text" id="num1">
+            <br></br>
+            <label>NUMERO2:</label>
+            <input type="text" id="num2">
+            <br></br>
+            <input type="button" onclick="sumar();" value="calcular">
+        </fieldset>
+        <script>/*necesito crear una funcion*/
+        function sumar(){
+            var n1 = document.getElementById('num1').value;
+            var n2 = document.getElementById('num2').value;
+            suma = Number(n1) + Number(n2);
+            resultado = suma;
+            document.write("<h4>El resultado de la suma es: <h4>" + suma);
+        }
+        </script>
+    </main>
+</body>
+</html>
+
+<!-------------------------------------SUMA PROFE---------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SUMAR DATOS DESDE UN FORMULARIO</title>
+    <style>
+        main{width: 20%; margin: auto;background: #000; color: #fff; padding: 5px 20px}
+        input [type="button"]{padding: 5px 10px; margin-left: 50px}
+    </style>
+</head>
+<body>
+    <main>
+        <fieldset>
+            <legend>Ingresa dos números</legend>
+            <label>NUMERO1:</label>
+            <input type="text" id="num1">
+            <br><br>
+            <label>NUMERO2:</label>
+           <input type="text" id="num2">
+            <br><br> 
+            <label>RESULTADO:</label>
+            <input type="text" id="resultado">
+            <br><br>
+            <input type="button"  onclick="sumar();" value="calcular">
+        </fieldset>
+        <script>
+        /*necesito crear una función*/
+        function sumar(){
+            var n1 = document.getElementById('num1').value;
+            var n2 = document.getElementById('num2').value;
+            var suma = Number(n1) + Number(n2);
+            document.getElementById('resultado').value = suma;
+        }
+        </script>   
+    </main>
+</body>
+</html>
+
+<!--------------------------SWITCH_INTERVALOS NUMERICOS------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var cantidad = Number(prompt("Introduce la cantidad a invertir"))
+        switch(true){
+        case cantidad > 1000 && cantidad <=5000:
+             montante = cantidad + cantidad*0.2;
+             totales = montante.toFixed(2);
+             document.write("Beneficio obtenido: " + totales + "€");
+        break;
+        case cantidad > 5000 && cantidad <= 10000:
+             montante = cantidad + cantidad*0.3;
+             totales = montante.toFixed(2);
+             document.write("Beneficio obtenido: " + totales + "€");
+        case cantidad > 1000 && cantidad <= 50000:
+             montante = cantidad + cantidad*0.7;
+             totales = montante.toFixed(2);
+             document.write("Beneficio obtenido: " + totales + "€");
+             alert("Lo sentimos la inversion tiene que ser superior")
+        break;
+            }
+    </script>
+</body>
+</html>
+
