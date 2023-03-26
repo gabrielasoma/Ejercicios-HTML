@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<head>
+<title>Efectos animacion</title>
+<style>
+#contenido, #contenido-2{
+width:900px;
+margin:0 auto;
+font-family:Tahoma;
+font-size:12pt;
+text-align: justify;
+
+}
+
+</style>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+
+$(function(){
+$("#btn-1").on("click", function(){
+if($(this).val() == "Ocultar")
+{
+$("#contenido").fadeOut(2000,function(){
+$("#btn-1").val("Mostrar");
+
+});
+}
+else
+{
+$("#contenido").fadeIn(2000,function(){
+$("#btn-1").val("Ocultar");
+});
+}
+});
+
+
+
+$("#btn-2").on("click", function(){
+if ($(this).val() == "Ocultar")
+{
+$("#contenido-2").slideUp(3000, function(){
+$("#btn-2").val("Mostrar");
+});
+}
+else
+{
+$("#contenido-2").slideDown(3000, function(){
+$("#btn-2").val("Ocultar");
+});
+}
+});
+
+});
+</script>
+</head>
+<body>
+<p>
+
+
+<center><input type="button" id="btn-1" value="Ocultar"></center><br/>
+<div id="contenido">
+<p></p>
+El río Guadarranque es un corto río costero del sur de España situado en la comarca andaluza 
+del Campo de Gibraltar, en la provincia de Cádiz. Su nombre procede del árabe Wadi-Ramke o río 
+de las yeguas.1 Tiene una longitud de 43 km. Nace en el monte de Castellar, a escasa distancia 
+de la ciudad de Castellar Viejo y vierte sus aguas en la bahía de Algeciras.2 Cerca de su nacimiento
+ se le unen los arroyos de Madre Vieja, el más importante de cuantos posee, y hacia la cuenca media 
+ los arroyos Dulce y Miraflores entre otros afluentes de menor importancia. La cuenca Guadarranque-Palmones 
+ forma parte de la Cuenca hidrográfica del Sur y tiene una extensión de 765 km².3 Este río abastece a gran 
+ parte de la población campogibraltareña gracias dos embalses situados en su cauce alto, la presa del Guadarranque 
+ con capacidad para 87 hm³ y la presa de Charco Redondo con 82 hm³,4 y a un amplio acuífero junto al Río Palmones 
+ de origen pliocuaternario de unos 105 km².5.
+ </div>
+ 
+ <p>
+ <p>
+ <center><input type="button" id="btn-2" value="Ocultar"></center><p>
+ <div id="contenido-2">
+ <p>
+ El Manzanares es un río del centro de España, afluente por la derecha del Jarama, que, a su vez, es tributario del Tajo. Este río, que discurre 
+ íntegramente por la Comunidad de Madrid, nace en la sierra de Guadarrama, en el Ventisquero de la Condesa —la ladera meridional de la Cuerda Larga, 
+ cerca de la Bola del Mundo—, y pasa por Madrid. Desemboca en el término municipal de Rivas-Vaciamadrid, después de un recorrido de 92 km.
+El río acoge diferentes ecosistemas y atraviesa zonas de gran valor medioambiental, que han recibido diferentes niveles de protección. Su cuenca alta, 
+desde su nacimiento hasta el Monte de El Pardo (incluyendo La Pedriza), constituye el Parque Regional de la Cuenca Alta del Manzanares, con una superficie
+de 52.796 hectáreas. Su curso bajo también se encuentra protegido, dentro del Parque Regional del Sureste. En términos generales, puede afirmarse que 
+el único tramo del río que no se encuentra protegido es el que discurre por el casco urbano de Madrid.
+ 
+ </p>
+ 
+ </div>
+
+
+
+
+</body>
+</html>
