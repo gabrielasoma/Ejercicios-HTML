@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!--<script src="js/desplegable.js"></script> -->
+	<!--SI NO PUSIÉRAMOS LA FUNCIÓN ANÓNIMA, EN ENLACE DE ESTE SCRIPT TENDRÍA QUE IR DESPUÉS DEL CIERRE DE HEADER PARA QUE CARGARA ANTES EL HEADER QUE ES A LO QUE ESTOY APLICANDO LA PROGRAMACIÓN--> 
+    <title>Menu Responsive</title>
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu" class="icon-align-justify"></label>
+        <nav class="menu">
+            <ul>
+                <li class="submenu"><a href="#">Ventas<span class="icon-down-open"></span></a>
+                    <ul>
+                        <li><a href="#">ModaM</a></li>
+                        <li><a href="#">ModaH</a></li>
+                        <li><a href="#">Niñas</a></li>
+                        <li><a href="#">Niños</a></li>
+                    </ul>        
+                </li>
+                <li class="submenu"><a href="#">Servicios<span class="icon-down-open"></span></a>
+                    <ul>
+                        <li><a href="#">Contables</a></li>
+                        <li><a href="#">Digitales</a></li>
+                        <li><a href="#">Proyectos</a></li>
+                        <li><a href="#">Maquetación</a></li>
+                    </ul>        
+                </li> 
+                <li><a href="#">Contacta</a></li>     
+            </ul>
+
+        </nav>
+    </header>
+	<script src="js/menu.js"></script>
+</body>
+</html>
