@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efectos JQuery</title>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="probando">
+
+
+    </div>
+    <div class="probando">
+
+
+    </div>
+    <script>
+        $('#probando').text('LA LIBRERÍA JQUERY ES');
+        $('#probando').css("text-align","center");
+        $('.probando').html('<strong>UNA DE LAS LIBRERÍAS MÁS USADAS EN APLICACIONES WEB.</strong>');
+
+    </script>
+   
+    <p id="texto">
+        Java Script es uno de los lenguajes más populares del desarrollo de aplicaciones
+
+    </p>
+    <script>
+        $(document).ready(function(){
+            setTimeout(()=>{
+                $('#texto').text('Las apps web, por lo general, usan JavaScript.');
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

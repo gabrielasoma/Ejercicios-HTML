@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS</title>
+    <style>
+        main{width: 50%; margin : auto}
+        h1{text-align: center}
+        #barra{width: 30%; height: 20%; background : gray ; margin: auto; text-align: center}
+        #target{width: 70%; height: 300px; background : black ; margin: auto; transition: all 5s }
+        #botones{width: 70%; margin: auto; display: flex; justify-content: space-around;}
+        button{width: 100px; height:20px;background : darkblue; color: white; text-align: center; margin: 20 px  }
+
+
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <main>
+        <h1>EVENTOS QUERY</h1>
+        <div id = "barra"></div>
+        <script>
+            $('#barra').on('click',function(){
+                alert("Todo programadordebe dominar JavaScript");
+            })
+        </script>
+        <div id = "target"></div>
+        <div id = "botones">
+            <button id="blue">BLUE</button>
+            <button id="red">RED</button>
+            <button id="green">GREEN</button>
+            <button id="yellow">YELLOW</button>
+        </div>
+        <script src="eventos.js"></script>
+    </main>
+    
+</body>
+</html>
