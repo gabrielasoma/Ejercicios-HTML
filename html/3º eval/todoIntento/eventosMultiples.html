@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos sobre la página HTML</title>
+    <style>
+        main{width: 40%; margin: 0 auto}
+    </style>
+    <script>
+        function obtenerdatos(){
+            var nombre = document.getElementById('nombre').value;
+            var edad = document.getElementById('edad').value;
+            document.registros.nombreobtenido.value = nombre;
+            document.registros.edadobtenida.value = edad;           
+        }
+    </script>
+</head>
+<body onload="alert('Bienvenido, no olvides rellenar el formulario')">
+    <main>
+    <h2 onmouseover="cambio(this)">BIENVENIDOS A LOS DE DATOS MEDIANTE EVENTOS</h2>
+    <form name="registros">
+        <table border="1">
+            <caption>Datos Enviados</caption>
+            <tr>
+                <td>Nombre:</td><td><input type="text" name="nombre" id="nombre" onfocus="foco(this)" onblur="nofoco(this)"></td>
+            </tr>
+            <tr>
+                <td>Edad:</td><td><input type="text" name="edad" id="edad" onfocus="foco(this)" onblur="nofoco(this)"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" name="datos" value="Enviar Datos" onclick="obtenerdatos(this)">
+                <input type="reset" name="borrar" id="borrar" value="Borrar Datos">
+                </td>
+            </tr>
+        </table>
+        <!--A PARTIR DE AQUI GENEREAMOS EL JAVASCRIPT-->
+        <script>
+            //foco para evento focus,no foco para evento onblur,cambio para onchange,cargar para onload
+            function foco(elemento){//focus
+                elemento.style.border = "3px solid red";
+                elemento.style.background = "lightblue";
+            }
+            //no foco para evento onblur
+            function nofoco(elemento){
+                elemento.style.border = "1px solid red";
+                elemento.style.background = "lightgreen";
+            }
+            //cambio para onchange
+            function cambio(elemento){
+                elemento.style.fontSize = "30px";
+                elemento.style.background = "green";
+                elemento.style.textAlign = "center";
+                elemento.style.color = "gold";
+            }
+            //cargar para onload
+            function cargar(elemento){         
+                elemento.style.background = "gray";  
+            }
+
+        </script>
+      <br/> <br/> <br/>
+      <table border="1">
+        <caption>Datos Recibidos</caption>
+        <tr>
+            <td>Nombre:</td><td><input type="text" name="nombreobtenido" id="nombreobtenido"></td>
+        </tr>
+        <tr>
+            <td>Edad:</td><td><input type="text" name="edadobtenida" id="edadobtenida"></td>
+        </tr>
+      </table>
+    </form>
+</main>  
+</body>
+</html>

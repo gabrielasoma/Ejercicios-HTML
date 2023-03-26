@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos asociados a botones</title>
+    <script>
+        function  inicializar(){
+            var btnRojo;
+            var btnAzul; 
+            btnRojo = document.getElementById('btnRojo');
+            //con la siguiente linea estoy generando un evento
+            btnRojo.addEventListener("click",btnRojoClic);
+           
+            btnAzul = document.getElementById('btnAzul');
+            //generador de eventos para el boton azul
+            btnAzul.addEventListener("mouseover",btnAzulClic);
+        }
+        function btnRojoClic(){
+            var titulo;
+            titulo = document.getElementById('encabezado')
+            titulo.style.color = "red";
+            titulo.style.textAlign = "center";
+        }
+        function btnAzulClic(){
+            var titulo;
+            titulo = document.getElementById('encabezado')
+            titulo.style.color = "blue";
+            titulo.style.textAlign = "center";
+        }
+    </script>
+</head>
+<body onload="inicializar()">
+    <h1 id="encabezado">Encabezado de la página principal</h1>
+    <input type="button" value="color Rojo" id="btnRojo"> 
+    <input type="button" value="color Azul" id="btnAzul">
+</body>
+</html>

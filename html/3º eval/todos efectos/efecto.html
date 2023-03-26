@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.0.js"></script>
+    <title>efectos</title>
+
+    <style type="text/css">
+     /*FADE IN*/      
+    #cuadrado1{
+    width:100px; 
+    height: 100px; 
+    background-color:blue;
+    display:none;/*desaparece para poder usar el efecto*/
+    margin-bottom: 30px;
+    }
+    /*slideDown*/
+    #panel,#btn{
+        padding: 5px;
+        text-align: center;
+        background-color: yellow;
+        border: solid 1px black;
+    }
+    #panel{   
+        padding: 50px;
+        display: none;
+    }
+    /*slideUp*/
+    #panel1,#btn1{
+        padding: 5px;
+        text-align: center;
+        background-color: rgb(0, 162, 255);
+        border: solid 1px black;
+    }
+    #panel1{
+        padding: 50px;
+        margin-bottom: 100px;
+    }
+   /*slideToggle*/
+    #panel2,#btn2{
+        padding: 5px;
+        text-align: center;
+        background-color: yellow;
+        border: solid 1px black;
+    }
+    #panel2{
+        padding: 50px;
+        display:none;
+    }
+
+   /*Animate*/
+    #cuadrado{
+    margin-top:30px;
+    text-align :center;
+    background-color:blue;
+    border: solid 1px black;
+    width: 50px;
+    height: 50px;
+    font-size: 8px;
+    }
+    
+    #cuadrado2{
+    text-align :center;
+    background-color:red;
+    border: solid 1px black;
+    width: 50px;
+    height: 50px;
+    font-size: 8px;
+    }
+    
+    #cuadrado3{
+    text-align :center;
+    background-color:yellow;
+    border: solid 1px black;
+    width: 50px;
+    height: 50px;
+    font-size: 8px;
+    }
+
+    #cuadro{
+        margin-top: 40px;
+        height: 150px;
+        width: 300px;
+        border: 1px solid black;
+        background-color: yellow;
+
+    }
+    </style>
+    
+    <body>
+         <!--FadeIn Azul-->
+    <input type="button" name="Button" value="Button Fade" id="btnFade">
+    <div id="cuadrado1"> </div>
+  
+  
+  <script>
+        $(document).ready(function(){
+        $("#btnFade").click(function(){
+            $("#cuadrado1").fadeIn();
+             });
+        });
+    </script>
+
+    <!--slideDown Amarillo-->
+        <div id="btn">click slideDown</div>
+        <div id="panel">slideDown</div>
+     
+     <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#panel").slideDown(3000);
+            });
+        });
+     </script>
+
+<!--SlideUp Amarillo-->
+    <div id="btn1">click para elevar el panel</div>
+    <div id="panel1">slideUp</div>
+
+    <script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#panel1").slideUp(3000);
+        });
+    });
+    </script>
+
+<!--SlideTogge Amarillo-->
+<div id="btn2">click para mostrar/ocultar el panel</div>
+<div id="panel2">slideTogge</div>
+
+<script>
+$(document).ready(function(){
+    $("#btn2").click(function(){
+        $("#panel2").slideToggle(3000);
+    });
+});
+</script>
+
+
+<!--Animate-->
+<div id="cuadrado">Cuadrado Azul</div>
+<div id="cuadrado2">Cuadrado Rojo</div>
+<div id="cuadrado3">Cuadrado Amarillo</div>
+<input type="button" name="Boton" value="Animar!" id="btn0"> 
+    <script>
+    $(document).ready(function(){
+        $("#btn0").click(function(){
+            $("#cuadrado").animate({ width: '100px',height: '100px',
+        });
+        });
+    });
+    </script>
+
+
+<!--Remove-->
+<div id="cuadro">
+<p id="p1">Parrafo de Nombres</p>
+<p id="p2">Parrafo de Apellidos</p>
+<p id="p3">Parrafo de Datos</p>
+</div>
+<button>Remove</button>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#p2").remove();
+        });
+    });
+    </script>
+    
+<!--Remove-->
+<p id="parrafo" style="display:none">Este es un parrafo...</p>
+<script>
+    $(function(){
+    var parrafo= $('parrafo');
+   // $('#parrafo').hide();//oculta un elemento (usa display flex)
+    $('#parrafo').show();//mostrar un elemento
+    parrafo.show();
+    });
+</script>
+
+
+</body>
+</html>
+
+  
+<!--
+
+slideDown
+slideUp
+slideToggle, casi siempre
+animate(“” : “”)
+remove
+hide
+slide
+fadeIn(3000)
+
+
+-->

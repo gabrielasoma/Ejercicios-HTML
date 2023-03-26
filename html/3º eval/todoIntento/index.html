@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>INTENTO</title>
+    <link rel="stylesheet" href="estilo.css"><script src="javascript.js"></script>
+    <script>
+        function  inicializar(){
+            var btnRojo;
+            var btnAzul; 
+            btnRojo = document.getElementById('btnRojo');
+            btnRojo.addEventListener("click",btnRojoClic);
+            btnAzul = document.getElementById('btnAzul');
+            btnAzul.addEventListener("mouseover",btnAzulClic);
+        }function btnRojoClic(){
+            var titulo;
+            titulo = document.getElementById('encabezado')
+            titulo.style.color = "red";
+            titulo.style.textAlign = "center";
+        } function btnAzulClic(){
+            var titulo;
+            titulo = document.getElementById('encabezado')
+            titulo.style.color = "blue";
+            titulo.style.textAlign = "center";}
+    </script>
+</head>
+<body body onload="inicializar()">
+    <h1 id="encabezado">Encabezado de la página principal</h1>
+    <input type="button" value="color Rojo" id="btnRojo"> 
+    <input type="button" value="color Azul" id="btnAzul">
+    <!--Para meter un video con sonido, y su barra de progreso-->
+    <main>
+        <section id="fondo">
+        <section id = "reproductor">
+        <h1>REPRODUCTOR VIDEO</h1>
+        <video id="medio" width="500px" height="300px">
+            <source src="bosqueConiferas.mp4" type = "video/mp4">     
+            </video>
+            <nav>
+                <div id = "botones"><button type="button" id="reproducir">PLAY</button></div>
+                <div id = "barra">
+                    <div id = "progreso"></div>                         
+                </div>
+                <div style="clear :both;"></div> <!--hace que el elemento caiga por debajo de cualquier elemento flotante que lo preceda en el documento-->        
+            </nav>
+        </section>
+                  <!--Eventos multiples en un formulario-->
+        <section id="diseño"width="90px" height="70px">
+        <h2 onmouseover="cambio(this)">BIENVENIDOS A LOS DE DATOS MEDIANTE EVENTOS</h2>
+        <form name="registros">
+            <table id ="tabla1" border="1">
+             <fieldset>
+                <legend>Ingresa datos</legend>
+                <label><b><p>Datos Enviados</p></b></label>
+                <tr><td>Nombre:</td><td><input type="text" name="nombre" id="nombre" onfocus="foco(this)" onblur="nofoco(this)"></td</tr>
+                <tr><td>Apellidos:</td><td><input type="text" name="apellidos" id="apellidos" onfocus="foco(this)" onblur="nofoco(this)"></td> </tr>
+                <tr></tr><td>Edad:</td><td><input type="text" name="edad" id="edad" onfocus="foco(this)" onblur="nofoco(this)"></td></tr>
+                <tr><td>Salario:</td><td><input type="text" name="salario" id="salario" onfocus="foco(this)" onblur="nofoco(this)"></td></tr>
+                <tr>
+                <td colspan="2"><input type="button" name="datos" id ="datos" value="Enviar Datos" onclick="obtenerdatos(this)">
+                    <input type="reset" name="borrar" id="borrar" value="Borrar Datos"></td>
+                </tr>              
+            </fieldset>
+            </table>
+            <table id ="tabla2" border="1">
+                <caption>Datos Recibidos</caption>
+                <tr><td>Nombre:</td><td><input type="text" name="nombreobtenido" id="nombreobtenido"></td> </tr>
+                <tr><td>Apellidos:</td><td><input type="text" name="apellidobtenido" id="apellidobtenido"></td> </tr>
+                <tr><td>Edad:</td><td><input type="text" name="edadobtenida" id="edadobtenida"></td> </tr>
+                <tr><td>Salario:</td><td><input type="text" name="salarioobtenido" id="salariootenido"></td></tr>
+              </table>
+            </form>
+            </section>
+
+            <!--galeria media-->
+            <section id="galeriamedia">
+            <h1>Parque Nacional</h1>
+            <div class="slider">
+                <ul><li><img src="img/1.jpg" alt=""></li>
+                    <li><img src="img/2.jpg" alt=""></li>
+                    <li><img src="img/3.jpg" alt=""></li>
+                    <li><img src="img/4.jpg" alt=""></li>
+                    <li><img src="img/5.jpg" alt=""></li> </ul></div>
+            <section id="sierra">
+                <div class="contenedor">
+                <article><video controls loop><source src="img/fauna_parque.mp4" type="video/mp4"></soucer> <h4>Fauna</h4></video></article>
+                <article><video controls loop><source src="img/rioGuadarrama.mp4" type="video/mp4"></soucer></video></article>
+                <video controls loop><source src="img/bosqueConiferas.mp4" type="video/mp4"></soucer></video> 
+             </section>   
+                <!--INTRODUCIR AUDIO-->
+            <section id=audio>
+                    <img id="imagen" src=img/img2.jpg type="img"> <audio src="musica.mp3" autoplay controls loop></audio> </section>           
+         </section></main></body></html>

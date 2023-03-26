@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+   
+</head>
+<body>
+    <!--tarea js-->
+    <h2>Capitales antiguas de España</h2>
+        <ol>
+            <li>Burgos</li>
+            <li>Valladolid</li>
+            <li>Toledo</li>
+        </ol>
+        <script>
+            var elemento = document.createElement("li"),
+            contenido = document.createTextNode("Madrid"),ç
+            elemento.appendChild(contenido);
+            var padre = document.getElementsByTagName("li")[0].parentNode,
+            primerElemento = document.getElementsByTagName("li")[0];
+            padre.insertBefore(elemento,primerElemento);
+        </script>
+         <!--TAREA Js-->
+          <h2>Entorno Natural Madrid</h2>
+          <ul>
+              <li>Rio Manzanares</li>
+              <li>Rio Guadarama</li>
+              <li>Sierra de Guadarama</li>
+          </ul>
+         <head>
+          <style>
+              .azul{background: #0074D9; border: 1px solid #000 ; color: gold;}
+              .rojo{background: red; border: 1px solid #000 ; color: #fff;}
+          </style>
+          <script>
+              var elemento = document.createElement("li")
+              contenido = document.createTextNode("Sierra Norte");
+              elemento.appendChild(contenido);
+              var padre = document.getElementsByTagName("li")[2].parentNode;
+              elemento.setAttribute("class", "rojo")
+              padre.appendChild(elemento).parentNode;
+              elemento.setAttribute("class","rojo")
+       </script>
+
+       
+          <div id="titulo"></div>
+          <P id="parrafo">
+          Madrid es un municipio y una ciudad de España, con categoría histórica de villa.
+          Constituye la capital del Estado y de la Comunidad de Madrid. En su término municipal, el más poblado de España, </P>
+          <p>En calidad de capital de España, alberga las sedes del Gobierno de España y sus Ministerios, de las Cortes Generales (Congreso y Senado),</p>
+          <p>En el plano internacional acoge la sede central de la Organización Mundial del Turismo (OMT), perteneciente a la ONU </p>
+          <p> Es un influyente centro cultural y cuenta con museos de referencia internacional, entre los que destacan el Museo del Prado</p>
+          <script>
+              var parrafo = document.getElementById('parrafo');
+              parrafo.style.background = "green";
+              parrafo.style.textAlign = "justify";
+              //crear nodo nuevo un titulo h1
+              //1 paso--> crear el elemento nodo
+              var elemento = document.createElement("h1");
+              //2 paso--> crear contenido del elemento
+              var contenido = document.createTextNode("Capital de España");
+              //3 paso--> añadir al elemento creado su contenido
+              elemento.appendChild(contenido);
+              //4 paso--> acceder a los atributos del elemento
+              elemento.setAttribute("align", "center");
+              //5 paso--> agregar el elemento al documento
+              document.getElementById('titulo').appendChild(elemento);
+          </script>
+<section>
+    <!--APLICACION FINANCIERA-->
+<style>
+    main{width: 30%; margin: auto; background: #000; color: #fff; padding: 5px 20px;}
+    input{width: 80%; margin-left: 20px}
+    input[type="button"]{width: 50%; margin-left: 50px}
+    select{padding: 5px; margin-left: 20px;}
+    label{margin-left: 50px}
+    h4{font-family: monospace; font-size: 12pt}
+</style>
+    <fieldset>
+        <h4>Aplicacion financiera</h4>
+        <label>Capital</label>
+        <input type="text" id="cantidad">
+        <br/><br/>
+        <select id="tasa">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+        </select>
+        <br/><br/>
+        <label>Tiempo</label>
+        <input type="text" id="tiempo">
+        <br/><br/>
+        <label>Importe Total</label>
+        <input type="text" id="resultado">
+        <br/><br/>
+        <input type="button" onclick="financiera();" value="CALCULAR">
+    </fieldset>
+<script>
+    function financiera(){
+    //crear las variables globales 
+    //nuevo metodo para crear variables en js (sustituir var por let)
+    let cantidad = document.getElementById('cantidad').value;
+    let tasa = document.getElementById('tasa').value;
+    let tiempo = document.getElementById('tiempo').value;
+    //crear variables locales para los calculos
+    let intereses = cantidad * tasa/100 * tiempo;
+    let importe = Number(cantidad) + Number(intereses);
+    document.getElementById('resultado').value = importe;
+}
+</script>
+
+</section>
+</body>
+</html>
