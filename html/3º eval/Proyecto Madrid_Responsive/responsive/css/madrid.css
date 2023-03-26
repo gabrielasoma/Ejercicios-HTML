@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    margin: 0 auto;
+    background: #f4b757;
+}
+header .contenedor{
+    width: 50%;
+    background: #c8a46d;
+}
+

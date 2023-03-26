@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta content="portal de turimo madrid">
+	<meta keywords="caapital de españa, retiro, museo de prado">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/madrid.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/mediaquery.css">
+    <link rel="stylesheet" href="css/mediaquery2.css">
+   <style>
+       #publicidad{
+		width: 700px;
+		height: 800px;
+		background: URL(parque.jpg);
+        background-size: 100;
+        background-repeat: no-repeat;
+        display: flex;
+        margin: auto;
+	    }
+
+        #anuncio{
+        position: relative;
+        width: 100%;
+        }
+
+        .barra{
+        width: 100%;
+        height: 40px;
+        position: absolute;
+        background:#ccc;           
+        }
+        #cerrar{
+        color: red;
+        float: right;
+        font-size:  14pt;
+        }
+
+   </style>
+   <script type = "text/javascript" src= "validacion.js"></script>
+</head>
+<body>
+   <header>
+    <div class="contenedor">
+        <h1 class="icon-bank">Cultura y Turismo de Madrid</h1><!--creamos un class con el icono que queremos, traído de fontello-->
+        <input type="checkbox" id="menu-bar"><!--creamos una casilla de check, pero para que funcione tiene q tener asociada una etiqueta label con el mismo atributo-->   
+        <label class="icon-menu" for="menu-bar"></label><!--creamos un class con el icono que queremos, traído de fontello-->
+        <nav class="menu"><!--si es una barra de navegación no demasiado compleja, no es necesario crear ul y li-->
+            <a href="#">Nosotros</a>
+            <a href="#">Museos</a>
+            <a href="#">Patrimonio</a>
+            <a href="#">Entorno</a>
+            <a href="#">Contacta</a>
+        </nav>
+    </div>
+    </header> 
+     <!--PUBLICIDAD-->
+   
+    <section id = "publicidad">
+        <div id ="anuncio">
+            <div class="barra">
+                <span id="cerrar">X</span>
+            </div>
+            <script>
+                $('#cerrar').on("click",function(){
+                $('#publicidad').remove();
+                });
+            </script>
+        </div>	
+    </section> 
+        </div>	
+    </section>
+
+    <script>
+        $(document).ready(function(){
+        $('#publicidad').hide(5000).fadeIn(5000);
+        });
+        </script>
+
+    <main>
+  
+
+
+        <section id="banner">
+            <img src="img/banner.jpg" alt="Jardines del Retiro"><!--no se pone de fondo en css ni dentro de contenedor pq sólo se me va a adaptar a la página para móvil, si se mete como background luego no se puede modificar para versión tablet y escritorio-->
+            <div class="contenedor">
+            <h2>De turismo por Madrid</h2>
+                <p>¿Qué zona de Madrid te gusta?</p>
+                <a href="#">VISITA LA CIUDAD</a>
+            </div>
+        </section>
+        
+        <section id="bienvenida">
+            <section id="izq">
+            <img src="img/madrid.jpg" alt="puerta del sol">
+          </section>
+            <section id="central">
+                <p> 
+               <strong>Madrid</strong>, entre las 25 ciudades con mejor calidad de vida del mundo, según Deutsche Bank. Madrid ocupa el puesto número 23 en la lista de las ciudades con mejor calidad del mundo, por delante de otras grandes urbes como Nueva York, París o Londres, según un informe elaborado por los economistas de Deutsche Bank, pese a que el precio del alquiler ha aumentado un 24% en solo un año y los salarios solo un 10%. La calidad de la atención sanitaria, el precio de la vivienda, el clima o el tiempo que se pierde en desplazarse desde casa hasta el trabajo son algunos de los factores para su elección.
+                </p>
+            </section>    
+            <section id="derecha">
+                <img src="img/publicidad.gif">
+            
+            </section>
+      </section>
+    
+    <section id="rosaleda">
+        <h3>Rosaleda del Parque del Retiro</h3>
+        <div class="contenedor">
+       <article>
+           <img src="img/ros1.jpg">
+           <h4>Symphonie</h4>
+       </article>
+       <article>
+           <img src="img/ros2.jpg">
+           <h4>Cosmos</h4>
+        </article>
+        <article>
+            <img src="img/ros3.jpg">
+            <h4>Floribunda</h4>
+        </article>
+       <article>
+            <img src="img/ros4.jpg">
+           <h4>Douce</h4>
+        </article>
+        </div>
+    </section> 
+    <section id="patrimonio">
+        <h3>Principales Museos</h3>
+        <div class="contenedor">
+        <article>
+        <img src="img/museoPrado.jpg" alt="Museo del Prado">
+        <h4>El Prado</h4>
+        </article>
+        <article>
+        <img src="img/museoThyssen.jpg" alt="Museo Thyssen">
+        <h4>Thyssen</h4>
+        </article>
+        <article>
+        <img src="img/MuseoRSofia.jpg" alt="Museo Reina Sofía">
+        <h4>Reina Sofía</h4>
+        </article>
+        <article>
+        <img src="img/museoArqueologico.jpg" alt="Museo Arqueológico">
+        <h4>Arqueológico</h4>
+        </article>
+        </div>
+    </section>
+    <section id="estatuas">
+        <h3>Estatuas del Retiro</h3>
+        <div class="contenedor">
+        <article>
+        <img src="img/monum1.jpg" alt="Rey Godo">
+        <h4>Rey Godo</h4>
+        </article>
+        <article>
+        <img src="img/monum2.jpg" alt="Ángel Caído">
+        <h4>Ángel Caído</h4>
+        </article>
+        <article>
+        <img src="img/monum3.jpg" alt="Fuente">
+        <h4>La Alcachofa</h4>
+        </article>
+        <article>
+        <img src="img/monum4.jpg" alt="Alfonso XII">
+        <h4>Alfonso XII</h4>
+        </article>
+        </div>
+    </section>
+        <footer>
+        <div class="contenedor">
+            <p>
+            ©COPYRIGHT Nuevo Portal Turístico de Madrid. 2018.
+            </p>
+            <div class="sociales">
+                <a class="icon-facebook-circled" href="#"></a>
+                <a class="icon-twitter-circled" href="#"></a>
+                <a class="icon-gplus-circled" href="#"></a>
+                <a class="icon-linkedin-circled" href="#"></a>
+            </div>
+       </div>
+       </footer>
+            
+    </main>
+  
+    
+</body>
+</html>

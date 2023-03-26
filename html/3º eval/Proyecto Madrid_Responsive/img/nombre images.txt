@@ -1,0 +1,23 @@
+
+ros1:   SYMPHONIE
+
+ros2:   COSMOS
+
+
+ros3: FLORIBUNDA
+
+
+ros4: DOUCE
+
+monum1: Rey Godo
+
+
+
+monum2:FteAlcachofa
+
+
+monum3: Angel Caido
+
+
+monum4: AlfonsoXII
+

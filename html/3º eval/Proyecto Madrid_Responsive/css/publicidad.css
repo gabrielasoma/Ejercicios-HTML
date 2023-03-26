@@ -1,0 +1,37 @@
+@media (min-width: 1024px){
+.publicidad{
+    width: 200%;
+    margin: auto;
+    padding-top: 25px;
+    overflow: hidden;
+}
+.publicidad ul{
+    display: flex;
+    padding: 0;
+    width: 500%;
+    animation: cambio 48s infinite alternate ease-in;
+}
+.publicidad li{
+    width: 100%;
+    list-style: none;
+}
+.publicidad img{
+    width: 100%;
+}
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    40%{margin-left: -100%;}
+
+    45%{margin-left: -200%;}
+    60%{margin-left: -200%;}
+    
+    65%{margin-left: -300%;}
+    80%{margin-left: -300%}
+
+    85%{margin-left: -400%;}
+    100%{margin-left: -400%}
+}
+}
