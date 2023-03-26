@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <!DOCTYPE vivero SYSTEM "flora.dtd">-->
+     <vivero   xsi:noNamespaceSchemaLocation="flora.xsd"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   
+   <vivero>
+        <especie siembra="2018">
+        <nombre>Litchi</nombre>
+        <precio moneda="euro">25</precio>
+        <variedad>Kway May Pink </variedad>
+        <origen>Filipinas</origen>
+        <colorFruto>rojo</colorFruto>
+        <colorFruto>rosa</colorFruto>
+        <otrosDatos>
+                <maduracion>Agosto</maduracion>
+                <riego>diario</riego>
+        </otrosDatos>
+    </especie>
+    
+    <especie siembra="2017">
+        <nombre>Longan</nombre>
+        <precio moneda="euro">10</precio>
+        <variedad>Champoo</variedad>
+        <origen>China</origen>
+        <colorFruto>marrón</colorFruto>
+        <otrosDatos>
+            <maduracion>Octubre</maduracion>
+            <riego>diario</riego>
+        </otrosDatos>
+    </especie>
+    
+    <especie siembra="2016">
+        <nombre>Litchi</nombre>
+        <precio moneda="euro">21</precio>
+        <variedad>mauritius </variedad>
+        <origen>Florida</origen>
+        <colorFruto>rojo</colorFruto>
+        <otrosDatos>
+            <maduracion>Agosto</maduracion>
+            <riego>diario</riego>
+        </otrosDatos>
+    </especie>
+</vivero>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="tienda">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="raqueta" minOccurs="1" maxOccurs="10"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="raqueta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="marca" minOccurs="1" maxOccurs="10"/>
+                <xs:element ref="modelo" minOccurs="1" maxOccurs="10"/>
+                <xs:element ref="anio" minOccurs="2019" maxOccurs="2020"/>
+                <xs:element ref="precio" minOccurs="1" maxOccurs="10"/> 
+                <xs:element ref="almacen" minOccurs="1" maxOccurs="2"/>
+            </xs:sequence>
+                <xs:attribute name="siembra" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+    
+    
+    <xs:element name="precio">
+        <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+                <xs:pattern value="\d{2}\.\f{3}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element> 
+    
+    
+    <xs:element name="almacen">
+        <xs:simpleType>
+            <xs:restriction>
+                  <xs:pattern value="\[A-Z]\-\d{4}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element> 
+    
+    
+    <xs:element name="marca" type="xs:string"/>
+    <xs:element name="modelo" type="xs:string"/>
+    <xs:element name="anio" type="xs:date"/> 
+    
+</xs:schema>
